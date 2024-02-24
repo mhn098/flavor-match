@@ -10,5 +10,5 @@ import { RestaurantService } from '../restaurant.service';
 export class BottomTab {
   @Input() restaurant!: restaurant_model;
 
-  constructor(public restaurantService: RestaurantService) {}
+  constructor(public restaurantService: RestaurantService){}
 }
