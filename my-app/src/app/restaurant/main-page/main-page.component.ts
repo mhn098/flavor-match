@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './main-page.component.css'
 })
 export class MainPageComponent {
-
+  public static Route = {
+    path: 'restaurant/main-page',
+    title: 'Main Page',
+    component: MainPageComponent,
+    canActivate: []
+  };
 }

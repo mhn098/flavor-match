@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-select',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './menu-select.component.css'
 })
 export class MenuSelectComponent {
-
+  public static Route = {
+    path: 'restaurant/menu-select',
+    title: 'Menu Select',
+    component: MenuSelectComponent,
+    canActivate: []
+  };
 }
