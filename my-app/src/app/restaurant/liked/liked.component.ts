@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-liked',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './liked.component.css'
 })
 export class LikedComponent {
-
+  public static Route = {
+    path: 'restaurant/liked',
+    title: 'Liked',
+    component: LikedComponent,
+    canActivate: []
+  };
 }
