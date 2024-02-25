@@ -19,20 +19,20 @@
     <label>Select City:</label>
     <select #city id="city" name="city">
         <option value="rtp">RTP</option>
-        <option value="chapel-hill">Chapel Hill</option>
-        <option value="durham">Durham</option>
-        <option value="raleigh">Raleigh</option>
+        <option value="CHAPEL HILL">Chapel Hill</option>
+        <option value="DURHAM">Durham</option>
+        <option value="RALEIGH">Raleigh</option>
     </select>
     <br><br>
 
     <label>Select Cuisine:</label>
     <select #cuisine id="cuisine" name="cuisine">
         <option value="all">All</option>
-        <option value="american">American</option>
-        <option value="asian">Asian</option>
-        <option value="indian">Indian</option>
-        <option value="italian">Italian</option>
-        <option value="mexican">Mexican</option>
+        <option value="American">American</option>
+        <option value="Asian">Asian</option>
+        <option value="Indian">Indian</option>
+        <option value="Italian">Italian</option>
+        <option value="Mexican">Mexican</option>
     </select>
     <button type="button"
      (click)="filter(city.value, cuisine.value)">Filter</button>

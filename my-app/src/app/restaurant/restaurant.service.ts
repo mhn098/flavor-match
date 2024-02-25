@@ -3821,8 +3821,6 @@ import { filter_model } from "./filter_model";
   public filterS(i_city: string, i_cuisine: string){
     this.f.city = i_city;
     this.f.cuisine = i_cuisine;
-    console.log(this.f.city);
-    console.log(this.f.cuisine);
     this.router.navigate(['/restaurant/swipe']);
   }
 
@@ -3869,23 +3867,41 @@ import { filter_model } from "./filter_model";
     }
 
     public filterData(): void{
-      let index = 0;
-      for(var resturant of this.myData){
-        if(this.f.city == 'RTP' && this.f.cuisine == 'All'){
-          this.filtered_data.push(index);
+      this.filtered_data = [];
+      let i = 0;
+      while(i < this.myData.length){
+        if(this.f.city == 'rtp' && this.f.cuisine == 'all'){
+          this.filtered_data.push(i);
         }
-        else if(this.f.city == 'RTP' && resturant.cuisine == this.f.cuisine){
-          this.filtered_data.push(index);
+        else if(this.f.city == 'rtp' && this.myData[i].cuisine == this.f.cuisine){
+          this.filtered_data.push(i);
         }
-        else if(resturant.city == this.f.city && this.f.cuisine == 'All'){
-          this.filtered_data.push(index);
+        else if(this.myData[i].city == this.f.city && this.f.cuisine == 'all'){
+          this.filtered_data.push(i);
         }
-        else if(resturant.city == this.f.city && resturant.cuisine == this.f.cuisine){
-          this.filtered_data.push(index);
+        else if(this.myData[i].city == this.f.city && this.myData[i].cuisine == this.f.cuisine){
+          this.filtered_data.push(i);
         }
-        index += 1;
+        i++; //looping through myData
       }
-    }
+      }
+      // for(let resturant of this.myData){
+      //   if(this.f.city == 'RTP' && this.f.cuisine == 'All'){
+      //     this.filtered_data.push(index);
+      //     console.log(this.filtered_data);
+      //   }
+      //   else if(this.f.city == 'RTP' && resturant.cuisine == this.f.cuisine){
+      //     this.filtered_data.push(index);
+      //   }
+      //   else if(resturant.city == this.f.city && this.f.cuisine == 'All'){
+      //     this.filtered_data.push(index);
+      //   }
+      //   else if(resturant.city == this.f.city && resturant.cuisine == this.f.cuisine){
+      //     this.filtered_data.push(index);
+      //   }
+      //   index += 1;
+      // }
+      // console.log(this.filtered_data);
 
     public getRestaurants(): {}[]{
       return this.myData;
