@@ -22,6 +22,7 @@
     "@angular/router": "^17.2.0",
     "@angular/ssr": "^17.2.1",
     "express": "^4.18.2",
+    "ngx-csv-parser": "^2.0.0",
     "papaparse": "^5.4.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

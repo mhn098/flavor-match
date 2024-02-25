@@ -19,5 +19,6 @@ export class MenuSelectComponent {
   };
 constructor(
   public restaurantService: RestaurantService
-) {}
+) {
+}
 }
