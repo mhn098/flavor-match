@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { restaurant_model } from "./restaurant_model";
 import { Router } from '@angular/router';
+import { filter_model } from "./filter_model";
 
 @Injectable({
     providedIn: 'root'
@@ -9,6 +10,10 @@ import { Router } from '@angular/router';
     constructor(private router: Router){}
     liked: restaurant_model[] = [];
     filter: restaurant_model[] = [];
+    f: filter_model = {
+      city: '',
+      cuisine: ''
+    }
 
 
     public mainPage() {
@@ -36,5 +41,10 @@ import { Router } from '@angular/router';
       return this.liked;
     }
 
-
+    public filterS(i_city: string, i_cuisine: string){
+      this.f.city = i_city;
+      this.f.cuisine = i_cuisine;
+      console.log(this.f.city);
+      console.log(this.f.cuisine);
+    }
   }

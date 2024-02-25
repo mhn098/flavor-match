@@ -5,6 +5,62 @@
 <!-- top bar -->
 <img src="/assets/img/fm-logo.png">
 
+
+<form>
+    <!-- <label>City:
+        <input #city id="city" type="text" name="city" value="">
+        <br><br>
+    </label>
+    
+    <label>Cuisine:
+        <input #cuisine id="cuisine" type="text" name="cuisine" value="">
+        <br><br>
+    </label>
+    <button
+        type="button"
+        (click)="this.filter(city.value, cuisine.value)">
+        Filter
+      </button> -->
+
+    <label>Select City:</label>
+    <select #city id="city" name="city">
+        <option value="rtp">RTP</option>
+        <option value="chapel-hill">Chapel Hill</option>
+        <option value="durham">Durham</option>
+        <option value="raleigh">Raleigh</option>
+    </select>
+    <br><br>
+
+    <label>Select Cuisine:</label>
+    <select #cuisine id="cuisine" name="cuisine">
+        <option value="all">All</option>
+        <option value="american">American</option>
+        <option value="asian">Asian</option>
+        <option value="indian">Indian</option>
+        <option value="italian">Italian</option>
+        <option value="mexican">Mexican</option>
+    </select>
+    <button type="button" (click)="filter(city.value, cuisine.value)">Filter</button>
+</form>
+
+<!-- <form [formGroup]="selectForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label class = "name" for = "city"> City</label>
+        <input matInput
+        placeholder="City"
+        formControlName="city"
+        name = "city"
+        required />
+        
+    </div> -->
+    <!-- <div>
+        <label class = "name" for "cuisine"> Cuisine</label>
+        <input id = "city" type="text"/>
+    </div> -->
+    <!-- <button class = "button" type = "submit"> Filter</button>
+
+    </form> -->
+<br>
 <!-- bottom tab -->
 <div class="bottom-bar">
     <button (click)="restaurantService.menuSelectPage()">Swipes</button>

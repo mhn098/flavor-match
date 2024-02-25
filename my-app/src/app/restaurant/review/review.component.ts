@@ -5,7 +5,7 @@ import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-review',
-  // standalone: true,
+  standalone: true,
   // imports: [],
   templateUrl: './review.component.html',
   styleUrl: './review.component.css'
