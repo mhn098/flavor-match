@@ -16,28 +16,12 @@
     transition: filter 0.3s ease;
 }
 
-/* .grid-item {
+.grid-item {
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
     transition: filter 0.3s ease;
-} */
-
-button {
-    width: 100%;
-    padding: 10px;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.grid-item {
-    margin: 0 10px;
-    float: left;
-    transition: filter 0.3s ease;
-	/* margin-bottom: 60px; */
 }
 
 .topright:hover,
@@ -46,23 +30,12 @@ button {
     filter: brightness(120%);
 }
 
-.grid-container {
-	display: grid;
-	grid-template-columns: auto auto auto;
+.middle:hover {
+    filter: brightness(120%)
 }
 
-.grid-container2 {
-	display: grid;
-    margin-left: 135px;
-    margin-top: 15px;
-	grid-template-columns: auto auto auto;
-}
-
-.grid-container3 {
-	display: grid;
-    margin-left: 135px;
-    margin-top: 13px;
-	grid-template-columns: auto auto auto;
+.middle {
+    margin-bottom: 21px;
 }
 
 .container {
@@ -76,9 +49,30 @@ button {
     height: 615px;
 }
 
-.small-image3 {
-    height: 50px;
-    width: 150px;
+.content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.restaurant-details {
+    flex-grow: 1;
+}
+
+.cuisine-images {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 75px;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: -34px;
+    height: 400px;
 }
 
 .small-image1 {
@@ -87,14 +81,34 @@ button {
 }
 
 .small-image2 {
-    height: 25px;
-    width: 25px;
+    height: 275px;
+    width: 275px;
+    margin-right: 34px;
+    margin-top: -32px;
 }
 
-button.non-hoverable {
-    background-color: transparent;
+.small-image3 {
+    height: 50px;
+    width: 150px;
+}
+
+h2 {
+    font-size: 18px;
 }
   
 p {
     font-size: 13px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.non-hoverable {
+    background-color: transparent;
 }
