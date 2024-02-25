@@ -6,6 +6,7 @@ import { MainPageComponent } from './restaurant/main-page/main-page.component';
 import { LikedComponent } from './restaurant/liked/liked.component';
 import { SwipeComponent } from './restaurant/swipe/swipe.component';
 import { ReviewComponent } from './restaurant/review/review.component';
+import { ResultComponent } from './restaurant/result/result.component';
 
 export const routes: Routes = [
   MenuSelectComponent.Route,
@@ -13,6 +14,7 @@ export const routes: Routes = [
   LikedComponent.Route,
   SwipeComponent.Route,
   ReviewComponent.Route,
+  ResultComponent.Route,
 {
   path: 'menu-select',
   title: 'Menu Select',
@@ -52,7 +54,15 @@ loadComponent: () =>
     import('./restaurant/review/review.component').then(
       (m) => m.ReviewComponent
     )
-  }
+},
+{
+  path: 'result',
+  title: 'Result',
+  loadComponent: () =>
+    import('./restaurant/result/result.component').then(
+      (m) => m.ResultComponent
+    )
+}
 ];
 
 @NgModule({

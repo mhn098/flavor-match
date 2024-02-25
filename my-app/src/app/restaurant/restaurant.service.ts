@@ -3804,6 +3804,7 @@ import { filter_model } from "./filter_model";
     seen: number[] = [];
     id: number = 0;
     filtered_data: number[] = [];
+    resultIndex: number = 0;
     
     constructor(private router: Router){
       for(let i = 0; i < this.myData.length; i++){
@@ -3883,7 +3884,16 @@ import { filter_model } from "./filter_model";
         }
         i++; //looping through myData
       }
-      }
+    }
+
+    public result(index: number): void {
+      this.resultIndex = index;
+      this.router.navigate(['/restaurant/result']);
+    }
+
+    public getResult(): number {
+      return this.resultIndex;
+    }
 
     public getRestaurants(): {}[]{
       return this.myData;

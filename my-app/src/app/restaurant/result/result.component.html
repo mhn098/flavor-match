@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="middle">
+        <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+            <img src="/assets/img/better-fm-logo.png"
+            width="500" 
+            height="135">
+        </button>
+    </div>
+    <div class="content">
+        <div class="column">
+            <div class="restaurant-details">
+                <h2 class="label">Restaurant Name</h2>
+                <p>{{ restaurantService.myData[restaurantService.getResult()].name}}</p>
+                <h2 class="label">Restaurant Cuisine</h2>
+                <p>{{ restaurantService.myData[restaurantService.getResult()].cuisine}}</p>
+                <h2 class="label">Restaurant Address</h2>
+                <p>{{ restaurantService.myData[restaurantService.getResult()].address}}</p>
+                <h2 class="label">Restaurant City</h2>
+                <p>{{ restaurantService.myData[restaurantService.getResult()].city}}</p>
+                <h2 class="label">Restaurant Phone Number</h2>
+                <p>{{ restaurantService.myData[restaurantService.getResult()].phone_number}}</p>
+            </div>
+            <div class="cuisine-images">
+                <img *ngIf="restaurantService.myData[restaurantService.getResult()].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+                <img *ngIf="restaurantService.myData[restaurantService.getResult()].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+                <img *ngIf="restaurantService.myData[restaurantService.getResult()].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+                <img *ngIf="restaurantService.myData[restaurantService.getResult()].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+                <img *ngIf="restaurantService.myData[restaurantService.getResult()].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+                <img *ngIf="restaurantService.myData[restaurantService.getResult()].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+                <img *ngIf="restaurantService.myData[restaurantService.getResult()].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+            </div>
+        </div>
+    </div>
+</div>
+    

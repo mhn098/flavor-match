@@ -1,76 +1,145 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.collapsible {
-  background-color: rgb(241, 76, 76);
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
+<!-- <div class="container">
+    <div class="icons">
+        <div class="topleft">
+            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+                <img src="/assets/img/icon-only.png"
+                width="50" 
+                height="50">
+            </button>
+        </div>
+        <div class="topright">
+            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+                <img src="/assets/img/text-only.png"
+                width="120" 
+                height="50">
+            </button>
+        </div>
 
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-</style>
-</head>
-<body>
-
-<!-- Top bar -->
-<div class="topleft">
-    <img src="/assets/img/icon-only.png" width="50" height="50">
-</div>
-
-<div class="topright">
-    <img src="/assets/img/text-only.png" width="120" height="50">
-</div>
-
-<!-- Bottom tab -->
-<div class="bottom-bar">
-    <div id="bottom-container">
         <div class="grid-container">
             <div class="grid-item">
-                <img src="/assets/img/match-button.png" alt="Match" (click)="restaurantService.menuSelectPage()" class="small-image">
+                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.menuSelectPage()">
+                <img src="/assets/img/match-button.png" alt="Match" class="small-image3">
+                </button>
             </div>
             <div class="grid-item">
-                <img src="/assets/img/rank-button.png" alt="Rank" (click)="restaurantService.likedPage()" class="small-image">
+                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.likedPage()">
+                <img src="/assets/img/rank-button.png" alt="Rank" class="small-image3">
+                </button>
             </div>
             <div class="grid-item">
-                <img src="/assets/img/review-button.png" alt="Review" (click)="restaurantService.reviewPage()" class="small-image">
+                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.reviewPage()">
+                <img src="/assets/img/review-button.png" alt="Review" class="small-image3">
+                </button>
             </div>
         </div>
     </div>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <button mat-stroked-button class="non-hoverable">
+        <img src="/assets/img/happy-reaction.png" alt="Like" class="small-image1">
+        </button>
+    </div>
+    <div class="grid-item">
+        <button mat-stroked-button class="non-hoverable">
+        <img src="/assets/img/neutral-reaction.png" alt="Neutral" class="small-image1">
+        </button>
+    </div>
+    <div class="grid-item">
+        <button mat-stroked-button class="non-hoverable">
+        <img src="/assets/img/sad-reaction.png" alt="Dislike" class="small-image1">
+        </button>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="icons">
+        <div class="topleft">
+            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+                <img src="/assets/img/icon-only.png"
+                width="50" 
+                height="50">
+            </button>
+        </div>
+        <div class="topright">
+            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+                <img src="/assets/img/text-only.png"
+                width="120" 
+                height="50">
+            </button>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.menuSelectPage()">
+                <img src="/assets/img/match-button.png" alt="Match" class="small-image3">
+                </button>
+            </div>
+            <div class="grid-item">
+                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.likedPage()">
+                <img src="/assets/img/rank-button.png" alt="Rank" class="small-image3">
+                </button>
+            </div>
+            <div class="grid-item">
+                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.reviewPage()">
+                <img src="/assets/img/review-button.png" alt="Review" class="small-image3">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container2">
+        <div class="grid-item">
+            <img src="/assets/img/happy-reaction.png" alt="Like" class="small-image1">
+        </div>
+        <div class="grid-item">
+            <img src="/assets/img/neutral-reaction.png" alt="Neutral" class="small-image1">
+        </div>
+        <div class="grid-item">
+            <img src="/assets/img/sad-reaction.png" alt="Dislike" class="small-image1">
+        </div>
+    </div>
+
+<div class="grid-container3">
+    <div class="grid-item3">
+    <p *ngFor="let index of restaurantService.getLikedRestaurants()">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+        {{restaurantService.myData[index].name}}
+    </p>
+    </div>
+
+    <div class="grid-item3">
+    <p *ngFor="let index of restaurantService.getindifferentRestaurant()">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+        {{restaurantService.myData[index].name}}
+    </p>
+    </div>
+
+    <div class="grid-item3">
+    <p *ngFor="let index of restaurantService.getDisLikedRestaurants()">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+        {{restaurantService.myData[index].name}}
+    </p>
+    </div>
+
 </div>
 
-<h2>Craving:</h2>
-<p *ngFor="let index of restaurantService.getLikedRestaurants()">
-    Name: {{restaurantService.myData[index].name}}
-</p>
-
-<h2>Indifferent about:</h2>
-<p *ngFor="let index of restaurantService.getDisLikedRestaurants()">
-    Name: {{restaurantService.myData[index].name}}
-</p>
-
-<h2>Not in the mood for:</h2>
-<p *ngFor="let index of restaurantService.getDisLikedRestaurants()">
-    Name: {{restaurantService.myData[index].name}}
-</p>
-
-</body>
-</html>
-
-
+</div>
