@@ -3795,16 +3795,20 @@ import { filter_model } from "./filter_model";
       }
     ]
     f: filter_model = {
-      city: '',
-      cuisine: ''
+      city: 'RTP',
+      cuisine: 'ALL'
     }
     liked: {}[] = [];
     disliked: {}[] = [];
     indifferent: {}[] = [];
     seen: number[] = [];
     id: number = 0;
+    filtered_data: number[] = [];
     
-    constructor(private router: Router){}
+    constructor(private router: Router){
+      for(let i = 0; i < this.myData.length; i++){
+        this.filtered_data.push(i);}
+    }
     dislike: restaurant_model[] = [];
     neutral: restaurant_model[] = [];
     like: restaurant_model[] = [];
@@ -3819,6 +3823,7 @@ import { filter_model } from "./filter_model";
     this.f.cuisine = i_cuisine;
     console.log(this.f.city);
     console.log(this.f.cuisine);
+    this.router.navigate(['/restaurant/swipe']);
   }
 
     public menuSelectPage() {
@@ -3833,54 +3838,53 @@ import { filter_model } from "./filter_model";
       this.router.navigate(['/restaurant/review']);
   }
 
-    public likeRestaurant(){
+    public likeRestaurant(index: number){
       //if statement for liked restaurants
       this.isSeen();
-      this.liked.push(this.myData[this.id]);
+      this.liked.push(this.myData[index]);
     }
 
     public getLikedRestaurants(): {}[]{
       return this.liked;
     }
 
-    public dislikeRestaurant(){
+    public dislikeRestaurant(index: number){
       //if statement for liked restaurants
       this.isSeen();
-      this.disliked.push(this.myData[this.id]);
+      this.disliked.push(this.myData[index]);
     }
 
     public getDisLikedRestaurants(): {}[]{
       return this.liked;
     }
 
-    public indifferentRestaurant(){
+    public indifferentRestaurant(index: number){
       //if statement for liked restaurants
       this.isSeen();
-      this.indifferent.push(this.myData[this.id]);
+      this.indifferent.push(this.myData[index]);
     }
 
     public getindifferentRestaurant(): {}[]{
       return this.indifferent;
     }
 
-    public filterCity(city_name: string): {}[]{
-      let list: {}[] = [];
+    public filterData(): void{
+      let index = 0;
       for(var resturant of this.myData){
-        if(resturant.city == city_name){
-          list.push(resturant);
+        if(this.f.city == 'RTP' && this.f.cuisine == 'All'){
+          this.filtered_data.push(index);
         }
-      }
-      return list;
-    }
-
-    public filterCuisine(cuisine_name: string): {}[]{
-      let list: {}[] = [];
-      for(var restaurant of this.myData){
-        if(restaurant.city == cuisine_name){
-          list.push(restaurant);
+        else if(this.f.city == 'RTP' && resturant.cuisine == this.f.cuisine){
+          this.filtered_data.push(index);
         }
+        else if(resturant.city == this.f.city && this.f.cuisine == 'All'){
+          this.filtered_data.push(index);
+        }
+        else if(resturant.city == this.f.city && resturant.cuisine == this.f.cuisine){
+          this.filtered_data.push(index);
+        }
+        index += 1;
       }
-      return list;
     }
 
     public getRestaurants(): {}[]{
