@@ -11,7 +11,7 @@ import { RestaurantService } from '../restaurant.service';
   templateUrl: './review.component.html',
   styleUrl: './review.component.css'
 })
-export class ReviewComponent implements OnInit{
+export class ReviewComponent{
   public static Route = {
     path: 'restaurant/review',
     title: 'Review',
@@ -23,8 +23,4 @@ export class ReviewComponent implements OnInit{
 
   constructor(public restaurantService: RestaurantService) {}
 
-  ngOnInit(): void {
-    this.myData = this.csvService.getMyData();
-    console.log(this.myData);
-  }
 }
