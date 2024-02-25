@@ -57,17 +57,17 @@
 
 <h2>Craving:</h2>
 <p *ngFor="let index of restaurantService.getLikedRestaurants()">
-    Name: {{restaurantService.myData[index].name}}
+    Name: {{restaurantService.myData[restaurantService.filtered_data[index]].name}}
 </p>
 
 <h2>Indifferent about:</h2>
 <p *ngFor="let index of restaurantService.getDisLikedRestaurants()">
-    Name: {{restaurantService.myData[index].name}}
+    Name: {{restaurantService.myData[restaurantService.filtered_data[index]].name}}
 </p>
 
 <h2>Not in the mood for:</h2>
 <p *ngFor="let index of restaurantService.getindifferentRestaurant()">
-    Name: {{restaurantService.myData[index].name}}
+    Name: {{restaurantService.myData[restaurantService.filtered_data[index]].name}}
 </p>
 
 </body>
