@@ -1,13 +1,26 @@
-<p>review works!</p>
+<body>
+<!-- <p>review works!</p> -->
+<div class="container">
+    <img src="/assets/img/trial-bg.png" width="0" height="0">
 
+    <!-- top bar -->
+    <div class="topleft">
+    <img src="/assets/img/icon-only.png"
+    width="50" 
+    height="50">
+    </div>
+    
+    <div class="topright">
+        <img src="/assets/img/text-only.png"
+        width="200" 
+        height="50">
+    </div>
 
-
-<!-- top bar -->
-<img src="/assets/img/fm-logo.png">
-
-<!-- bottom tab -->
-<div class="bottom-bar"> 
-    <button (click)="restaurantService.menuSelectPage()">Swipes</button>
-    <button (click)="restaurantService.likedPage()">Picks</button>
-    <button (click)="restaurantService.reviewPage()">Reviews</button>
+    <!-- bottom tab -->
+    <div class="bottom-bar"> 
+        <button (click)="restaurantService.menuSelectPage()">Swipes</button>
+        <button (click)="restaurantService.likedPage()">Picks</button>
+        <button (click)="restaurantService.reviewPage()">Reviews</button>
+    </div>
 </div>
+</body>
