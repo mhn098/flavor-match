@@ -1,20 +1,44 @@
 .topright {
     float: right;
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    cursor: pointer; 
+    transition: filter 0.3s ease;
 }
 
 .topleft {
     float: left;
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.grid-item {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.topright:hover,
+.topleft:hover,
+.grid-item:hover {
+    filter: brightness(120%);
 }
 
 .container {
-    /* position: relative; */
+    position: relative;
     background-size: cover;
 	background-position: center;
+    justify-content: center;
+    align-items: center;
 	background-image: url(/assets/img/trial-bg.png);
-    width: auto;
-    height: auto;
-    /* min-height: 100vh;
-    padding: 20px; */
+    width: 1260px;
+    height: 615px;
 }
 
 .content {
@@ -35,29 +59,28 @@
     margin-top: 75px;
 }
 
-.reaction-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 0px;
-    height: 150px;
-}
-
 .reaction-buttons button {
     margin: 0 24px;
     height: 150px;
     width: 150px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    filter: brightness(100%);
+    transition: filter 0.3s ease;
 }
 
-/* .top {
-    justify-content: space-between;
-} */
+.reaction-buttons button:hover {
+    filter: brightness(120%);
+}
 
 .column {
     display: flex;
     justify-content: center;
     margin-top: -20px;
-    margin-bottom: -50px;
-    height: 500px;
+    margin-bottom: -34px;
+    height: 400px;
 }
 
 .small-image1 {
@@ -66,14 +89,47 @@
 }
 
 .small-image2 {
-    height: 300px;
-    width: 300px;
+    height: 275px;
+    width: 275px;
+    margin-right: 34px;
+    margin-top: -32px;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 18px;
 }
   
 p {
-    font-size: 14px;
+    font-size: 13px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.non-hoverable {
+    background-color: transparent;
+}
+
+.small-image3 {
+    height: 50px;
+    width: 150px;
+}
+
+.grid-item {
+    margin: 0 10px;
+    float: left;
+    transition: filter 0.3s ease;
+	margin-bottom: 60px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: -60px;
 }

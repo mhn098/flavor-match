@@ -1,47 +1,54 @@
-<p>menu-select works!</p>
-
-<body>
-    <!-- top bar -->
+<div class="container">
+<div class="icons">
     <div class="topleft">
-    <img src="/assets/img/icon-only.png"
-    width="50" 
-    height="50">
+        <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+            <img src="/assets/img/icon-only.png" width="50" height="50">
+        </button>
     </div>
-    
     <div class="topright">
-        <img src="/assets/img/text-only.png"
-        width="200" 
-        height="50">
+        <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+            <img src="/assets/img/text-only.png" width="120" height="50">
+        </button>
     </div>
-</body>
-
-<form>
-    <label>Select City:</label>
-    <select #city id="city" name="city">
-        <option value="rtp">RTP</option>
-        <option value="chapel-hill">Chapel Hill</option>
-        <option value="durham">Durham</option>
-        <option value="raleigh">Raleigh</option>
-    </select>
-    <br><br>
-
-    <label>Select Cuisine:</label>
-    <select #cuisine id="cuisine" name="cuisine">
-        <option value="all">All</option>
-        <option value="american">American</option>
-        <option value="asian">Asian</option>
-        <option value="indian">Indian</option>
-        <option value="italian">Italian</option>
-        <option value="mexican">Mexican</option>
-    </select>
-    <button type="button"
-     (click)="filter(city.value, cuisine.value)">Filter</button>
-</form>
-
-<br>
-<!-- bottom tab -->
-<div class="bottom-bar">
-    <button (click)="restaurantService.menuSelectPage()">Swipes</button>
-    <button (click)="restaurantService.likedPage()">Picks</button>
-    <button (click)="restaurantService.reviewPage()">Reviews</button>
+    <div class="grid-container">
+        <div class="grid-item">
+            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.menuSelectPage()">
+            <img src="/assets/img/match-button.png" alt="Match" class="small-image">
+            </button>
+        </div>
+        <div class="grid-item">
+            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.likedPage()">
+            <img src="/assets/img/rank-button.png" alt="Rank" class="small-image">
+            </button>
+        </div>
+        <div class="grid-item">
+            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.reviewPage()">
+            <img src="/assets/img/review-button.png" alt="Review" class="small-image">
+            </button>
+        </div>
+    </div>
+</div>
+    <div class="center">
+        <form>
+            <h2>Select City:</h2>
+            <select #city id="city" name="city">
+                <option value="rtp">RTP</option>
+                <option value="chapel-hill">Chapel Hill</option>
+                <option value="durham">Durham</option>
+                <option value="raleigh">Raleigh</option>
+            </select>
+            <br><br>
+            <h2>Select Cuisine:</h2>
+            <select #cuisine id="cuisine" name="cuisine">
+                <option value="all">All</option>
+                <option value="american">American</option>
+                <option value="asian">Asian</option>
+                <option value="indian">Indian</option>
+                <option value="italian">Italian</option>
+                <option value="mexican">Mexican</option>
+            </select>
+            <br><br>
+            <button type="button" class="hoverable" (click)="filter(city.value, cuisine.value)">Filter</button>
+        </form>
+    </div>
 </div>
