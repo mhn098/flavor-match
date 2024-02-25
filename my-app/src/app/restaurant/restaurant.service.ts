@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
 import { restaurant_model } from "./restaurant_model";
 import { Router } from '@angular/router';
-import { filter_model } from "./filter_model";
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import * as Papa from 'papaparse';
 import { Observable } from "rxjs";
+import { filter_model } from "./filter_model";
+
 
 @Injectable({
     providedIn: 'root'
@@ -19,6 +20,66 @@ import { Observable } from "rxjs";
         "zip_code": 27707,
         "city": "DURHAM",
         "cuisine": "American",
+        "is_fast_food": false,
+        "is_breakfast": false
+      },
+      {
+        "name": "LOS TRES MEXICAN RESTAURANT",
+        "phone_number": "(919) 544-9247",
+        "address": "6905 FAYETTEVILLE ROAD",
+        "zip_code": 27713,
+        "city": "DURHAM",
+        "cuisine": "Mexican",
+        "is_fast_food": false,
+        "is_breakfast": false
+      },
+      {
+        "name": "BLUE RIDGE DELI AND CAFE",
+        "phone_number": "(919) 361-0414",
+        "address": "3530 S ALSTON AVENUE",
+        "zip_code": 27713,
+        "city": "DURHAM",
+        "cuisine": "Coffee",
+        "is_fast_food": true,
+        "is_breakfast": true
+      },
+      {
+        "name": "TOKYO EXPRESS",
+        "phone_number": "(919) 477-4488",
+        "address": "3225 GUESS RD",
+        "zip_code": 27705,
+        "city": "DURHAM",
+        "cuisine": "Asian",
+        "is_fast_food": false,
+        "is_breakfast": false
+      },
+      {
+        "name": "PIZZA HUT DELIVERY",
+        "phone_number": "(919) 477-7377",
+        "address": "3808 GUESS ROAD",
+        "zip_code": 27705,
+        "city": "DURHAM",
+        "cuisine": "Italian",
+        "is_fast_food": true,
+        "is_breakfast": false
+      },
+      {
+        "name": "WAFFLE HOUSE",
+        "phone_number": "(919) 382-3355",
+        "address": "3500 HILLSBOROUGH RD",
+        "zip_code": 27705,
+        "city": "DURHAM",
+        "cuisine": "Breakfast",
+        "is_fast_food": true,
+        "is_breakfast": true
+      },
+      {
+        "name": "SITAR INDIAN CUISINE",
+        "phone_number": "(919) 490-1326",
+        "address": "3630 CHAPEL HILL BLVD.",
+        "zip_code": 27707,
+        "city": "DURHAM",
+        "cuisine": "Indian",
         "is_fast_food": false,
         "is_breakfast": false
       },
@@ -121,26 +182,6 @@ import { Observable } from "rxjs";
         "cuisine": "American",
         "is_fast_food": false,
         "is_breakfast": false
-      },
-      {
-        "name": "LOS TRES MEXICAN RESTAURANT",
-        "phone_number": "(919) 544-9247",
-        "address": "6905 FAYETTEVILLE ROAD",
-        "zip_code": 27713,
-        "city": "DURHAM",
-        "cuisine": "Mexican",
-        "is_fast_food": false,
-        "is_breakfast": false
-      },
-      {
-        "name": "BLUE RIDGE DELI AND CAFE",
-        "phone_number": "(919) 361-0414",
-        "address": "3530 S ALSTON AVENUE",
-        "zip_code": 27713,
-        "city": "DURHAM",
-        "cuisine": "Coffee",
-        "is_fast_food": true,
-        "is_breakfast": true
       },
       {
         "name": "FREDDY'S FROZEN CUSTARD AND STEAKBURGERS",
@@ -350,16 +391,6 @@ import { Observable } from "rxjs";
         "city": "DURHAM",
         "cuisine": "Asian",
         "is_fast_food": false,
-        "is_breakfast": false
-      },
-      {
-        "name": "PIZZA HUT DELIVERY",
-        "phone_number": "(919) 477-7377",
-        "address": "3808 GUESS ROAD",
-        "zip_code": 27705,
-        "city": "DURHAM",
-        "cuisine": "Italian",
-        "is_fast_food": true,
         "is_breakfast": false
       },
       {
@@ -3763,7 +3794,10 @@ import { Observable } from "rxjs";
         "is_breakfast": false
       }
     ]
-
+    f: filter_model = {
+      city: '',
+      cuisine: ''
+    }
     liked: {}[] = [];
     disliked: {}[] = [];
     indifferent: {}[] = [];
@@ -3771,10 +3805,6 @@ import { Observable } from "rxjs";
     id: number = 0;
     
     constructor(private router: Router){}
-    f: filter_model = {
-      city: '',
-      cuisine: ''
-    }
     dislike: restaurant_model[] = [];
     neutral: restaurant_model[] = [];
     like: restaurant_model[] = [];
@@ -3782,6 +3812,13 @@ import { Observable } from "rxjs";
 
     public mainPage() {
       this.router.navigate(['/restaurant/main-page']);
+  }
+
+  public filterS(i_city: string, i_cuisine: string){
+    this.f.city = i_city;
+    this.f.cuisine = i_cuisine;
+    console.log(this.f.city);
+    console.log(this.f.cuisine);
   }
 
     public menuSelectPage() {
@@ -3805,14 +3842,6 @@ import { Observable } from "rxjs";
     public getLikedRestaurants(): {}[]{
       return this.liked;
     }
-
-    public filterS(i_city: string, i_cuisine: string){
-      this.f.city = i_city;
-      this.f.cuisine = i_cuisine;
-      console.log(this.f.city);
-      console.log(this.f.cuisine);
-    }
-  }
 
     public dislikeRestaurant(){
       //if statement for liked restaurants
