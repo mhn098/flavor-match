@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RestaurantService } from '../restaurant.service';
+import { CommonModule, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-liked',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './liked.component.html',
   styleUrl: './liked.component.css'
 })

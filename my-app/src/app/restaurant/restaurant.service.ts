@@ -3799,8 +3799,8 @@ import { filter_model } from "./filter_model";
       cuisine: 'ALL'
     }
     liked: number[] = [];
-    disliked: {}[] = [];
-    indifferent: {}[] = [];
+    disliked: number[] = [];
+    indifferent: number[] = [];
     seen: number[] = [];
     id: number = 0;
     filtered_data: number[] = [];
@@ -3809,10 +3809,6 @@ import { filter_model } from "./filter_model";
       for(let i = 0; i < this.myData.length; i++){
         this.filtered_data.push(i);}
     }
-    // dislike: restaurant_model[] = [];
-    // neutral: restaurant_model[] = [];
-    // like: restaurant_model[] = [];
-
 
     public mainPage() {
       this.router.navigate(['/restaurant/main-page']);
@@ -3821,6 +3817,7 @@ import { filter_model } from "./filter_model";
   public filterS(i_city: string, i_cuisine: string){
     this.f.city = i_city;
     this.f.cuisine = i_cuisine;
+    this.filterData();
     console.log(this.f.city);
     console.log(this.f.cuisine);
     this.router.navigate(['/restaurant/swipe']);
@@ -3842,35 +3839,36 @@ import { filter_model } from "./filter_model";
       //if statement for liked restaurants
       this.isSeen();
       this.liked.push(index);
+      console.log(index);
     }
 
-    public getLikedRestaurants(): {}[]{
+    public getLikedRestaurants(): number[]{
       return this.liked;
     }
 
     public dislikeRestaurant(index: number){
       //if statement for liked restaurants
       this.isSeen();
-      this.disliked.push(this.myData[index]);
+      this.disliked.push(index);
     }
 
-    public getDisLikedRestaurants(): {}[]{
-      return this.liked;
+    public getDisLikedRestaurants(): number[]{
+      return this.disliked;
     }
 
     public indifferentRestaurant(index: number){
       //if statement for liked restaurants
       this.isSeen();
-      this.indifferent.push(this.myData[index]);
+      this.indifferent.push(index);
     }
 
-    public getindifferentRestaurant(): {}[]{
+    public getindifferentRestaurant(): number[]{
       return this.indifferent;
     }
 
     public filterData(): void{
       let index = 0;
-      for(var resturant of this.myData){
+      for(let resturant of this.myData){
         if(this.f.city == 'RTP' && this.f.cuisine == 'All'){
           this.filtered_data.push(index);
         }
