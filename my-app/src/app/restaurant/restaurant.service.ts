@@ -3956,7 +3956,7 @@ import { filter_model } from "./filter_model";
     }
 
     public roulette(){
-      return this.liked[Math.floor(Math.random() * this.liked.length)];
+      return Math.floor(Math.random() * this.myData.length);
 }
     public randomGenerator(){
       let result = this.myData[this.roulette()].name;
