@@ -22,8 +22,7 @@ export class SwipeComponent {
   public index: number = 0;
 constructor(
   public restaurantService: RestaurantService
-) {
-  restaurantService.filterData();
+) {restaurantService.filterData();
 }
 public hitlike(): void{
   this.index += 1;
