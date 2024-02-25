@@ -288,7 +288,7 @@ import { Observable } from "rxjs";
         "address": "1720 GUESS RD",
         "zip_code": 27701,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": false,
         "is_breakfast": false
       },
@@ -358,7 +358,7 @@ import { Observable } from "rxjs";
         "address": "3808 GUESS ROAD",
         "zip_code": 27705,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -408,7 +408,7 @@ import { Observable } from "rxjs";
         "address": "6209 FALCONBRIDGE RD",
         "zip_code": 27514,
         "city": "CHAPEL HILL",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -458,7 +458,7 @@ import { Observable } from "rxjs";
         "address": "1813 MLK PARKWAY",
         "zip_code": 27707,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -498,7 +498,7 @@ import { Observable } from "rxjs";
         "address": "1209 W. MAIN ST.",
         "zip_code": 27701,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -528,7 +528,7 @@ import { Observable } from "rxjs";
         "address": "5318 NEW HOPE COMMONS EXT",
         "zip_code": 27707,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -608,7 +608,7 @@ import { Observable } from "rxjs";
         "address": "923 N. MIAMI BLVD.",
         "zip_code": 27703,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -773,12 +773,12 @@ import { Observable } from "rxjs";
         "is_breakfast": false
       },
       {
-        "name": "CARRABBAS ITALIAN GRILL",
+        "name": "CARRABBAS Italian GRILL",
         "phone_number": "(919) 401-5950",
         "address": "5312 NEW HOPE COMMONS EXTENS",
         "zip_code": 27707,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": false,
         "is_breakfast": false
       },
@@ -808,7 +808,7 @@ import { Observable } from "rxjs";
         "address": "121 SHERRON RD 302",
         "zip_code": 27703,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -928,7 +928,7 @@ import { Observable } from "rxjs";
         "address": "4711 HOPE VALLEY ROAD",
         "zip_code": 27707,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -958,7 +958,7 @@ import { Observable } from "rxjs";
         "address": "4901 HIGHWAY 55",
         "zip_code": 27713,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -1058,7 +1058,7 @@ import { Observable } from "rxjs";
         "address": "4810 HOPE VALLEY RD, SUITE 112",
         "zip_code": 27707,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -1088,7 +1088,7 @@ import { Observable } from "rxjs";
         "address": "2107 E. HWY. 54",
         "zip_code": 27713,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -1168,7 +1168,7 @@ import { Observable } from "rxjs";
         "address": "810 W PEABODY ST",
         "zip_code": 27701,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": false,
         "is_breakfast": false
       },
@@ -1338,7 +1338,7 @@ import { Observable } from "rxjs";
         "address": "2300 CHAPEL HILL ROAD",
         "zip_code": 27707,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -1438,7 +1438,7 @@ import { Observable } from "rxjs";
         "address": "3001 E HOLLOWAY ST",
         "zip_code": 27703,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -1518,7 +1518,7 @@ import { Observable } from "rxjs";
         "address": "3422 RED MILL ROAD",
         "zip_code": 27704,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -1728,7 +1728,7 @@ import { Observable } from "rxjs";
         "address": "3906 N DUKE ST.",
         "zip_code": 27704,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -1938,7 +1938,7 @@ import { Observable } from "rxjs";
         "address": "102 CITY HALL PLAZA SUITE 101",
         "zip_code": 27701,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": false,
         "is_breakfast": false
       },
@@ -1978,7 +1978,7 @@ import { Observable } from "rxjs";
         "address": "5311 S MIAMI BLVD",
         "zip_code": 27703,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -2248,7 +2248,7 @@ import { Observable } from "rxjs";
         "address": "1125 W NC HIGHWAY 54 SUITE 406",
         "zip_code": 27707,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -2408,7 +2408,7 @@ import { Observable } from "rxjs";
         "address": "3751 HOLLOWAY STREET",
         "zip_code": 27703,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -2453,12 +2453,12 @@ import { Observable } from "rxjs";
         "is_breakfast": true
       },
       {
-        "name": "ITALIAN PIZZERIA SANDWICH",
+        "name": "Italian PIZZERIA SANDWICH",
         "phone_number": "(984) 219-6110",
         "address": "3405 SUITE A HILLSBOROUGH ROAD",
         "zip_code": 27705,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": false,
         "is_breakfast": false
       },
@@ -2473,12 +2473,12 @@ import { Observable } from "rxjs";
         "is_breakfast": true
       },
       {
-        "name": "ITALIAN PIZZERIA",
+        "name": "Italian PIZZERIA",
         "phone_number": "(919) 471-0664",
         "address": "3823 GUESS RD",
         "zip_code": 27705,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": false,
         "is_breakfast": false
       },
@@ -2488,7 +2488,7 @@ import { Observable } from "rxjs";
         "address": "1601 HWY. 54",
         "zip_code": 27713,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -2518,7 +2518,7 @@ import { Observable } from "rxjs";
         "address": "811 BROAD ST",
         "zip_code": 27701,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -2578,7 +2578,7 @@ import { Observable } from "rxjs";
         "address": "5400 S MIAMI BLVD SUITE 102",
         "zip_code": 27703,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -2608,7 +2608,7 @@ import { Observable } from "rxjs";
         "address": "3825 S ROXBORO ST",
         "zip_code": 27713,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -2618,7 +2618,7 @@ import { Observable } from "rxjs";
         "address": "5428 NEW HOPE COMMONS",
         "zip_code": 27707,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -2648,7 +2648,7 @@ import { Observable } from "rxjs";
         "address": "3600 N DUKE STREET",
         "zip_code": 27704,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -2723,12 +2723,12 @@ import { Observable } from "rxjs";
         "is_breakfast": true
       },
       {
-        "name": "ITALIAN PIZZERIA",
+        "name": "Italian PIZZERIA",
         "phone_number": "(919) 220-1386",
         "address": "3500 N ROXBORO ROAD",
         "zip_code": 27704,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": false,
         "is_breakfast": false
       },
@@ -2828,7 +2828,7 @@ import { Observable } from "rxjs";
         "address": "2105 SHERRON RD",
         "zip_code": 27703,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -3198,7 +3198,7 @@ import { Observable } from "rxjs";
         "address": "5279 N. ROXBORO ROAD",
         "zip_code": 27704,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -3238,7 +3238,7 @@ import { Observable } from "rxjs";
         "address": "1058 W CLUB BLVD",
         "zip_code": 27701,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -3418,7 +3418,7 @@ import { Observable } from "rxjs";
         "address": "6910 FAYETTEVILLE ROAD",
         "zip_code": 27713,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": false,
         "is_breakfast": false
       },
@@ -3488,7 +3488,7 @@ import { Observable } from "rxjs";
         "address": "4201-103 UNIVERSITY DRIVE",
         "zip_code": 27707,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -3528,7 +3528,7 @@ import { Observable } from "rxjs";
         "address": "6910 FAYETTEVILLE ROAD",
         "zip_code": 27713,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -3588,7 +3588,7 @@ import { Observable } from "rxjs";
         "address": "2608 ERWIN ROAD",
         "zip_code": 27705,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -3648,7 +3648,7 @@ import { Observable } from "rxjs";
         "address": "4502 N. ROXBORO ROAD",
         "zip_code": 27704,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       },
@@ -3758,16 +3758,17 @@ import { Observable } from "rxjs";
         "address": "1201 COLE MILL RD.",
         "zip_code": 27705,
         "city": "DURHAM",
-        "cuisine": "Itallian",
+        "cuisine": "Italian",
         "is_fast_food": true,
         "is_breakfast": false
       }
     ]
-    constructor(private router: Router){
-    }
 
     liked: {}[] = [];
+    disliked: {}[] = [];
+    indifferent: {}[] = [];
     seen: number[] = [];
+    id: number = 0;
     
     constructor(private router: Router){}
     dislike: restaurant_model[] = [];
@@ -3792,13 +3793,34 @@ import { Observable } from "rxjs";
       this.router.navigate(['/restaurant/review']);
   }
 
-    public likeRestaurant(id: number){
+    public likeRestaurant(){
       //if statement for liked restaurants
-      this.liked.push(this.myData[id]);
+      this.isSeen();
+      this.liked.push(this.myData[this.id]);
     }
 
     public getLikedRestaurants(): {}[]{
       return this.liked;
+    }
+
+    public dislikeRestaurant(){
+      //if statement for liked restaurants
+      this.isSeen();
+      this.disliked.push(this.myData[this.id]);
+    }
+
+    public getDisLikedRestaurants(): {}[]{
+      return this.liked;
+    }
+
+    public indifferentRestaurant(){
+      //if statement for liked restaurants
+      this.isSeen();
+      this.indifferent.push(this.myData[this.id]);
+    }
+
+    public getindifferentRestaurant(): {}[]{
+      return this.indifferent;
     }
 
     public filterCity(city_name: string): {}[]{
@@ -3825,6 +3847,10 @@ import { Observable } from "rxjs";
       return this.myData;
     }
 
+    public isSeen(): void{
+      this.id += 1;
+    }
+
     /*public getNotSeenRestaurants(): {}[]{
       let list: {}[] = [];
       let index = 0;
@@ -3837,9 +3863,9 @@ import { Observable } from "rxjs";
     }*/
 
     public roulette(): {}{
-      return this.myData[Math.floor(Math.random() * this.myData.length)];
+      return this.liked[Math.floor(Math.random() * this.liked.length)];
 
-    public addDislike(restaurant: restaurant_model){
+    /*public addDislike(restaurant: restaurant_model): {
       this.dislike.push(restaurant);
     }
 
@@ -3862,10 +3888,6 @@ import { Observable } from "rxjs";
     public getLike(): restaurant_model[]{
     return this.like;
     }
-    
-    public filterCity(city: string){
-        // take input from menu-select
-    }
 
     public dislikeButton(restaurant: restaurant_model) {
         restaurant.not_seen = false;
@@ -3876,10 +3898,5 @@ import { Observable } from "rxjs";
         restaurant.not_seen = false;
         this.addNeutral(restaurant);
 
-    }
-
-    public likeButton(restaurant: restaurant_model) {
-        restaurant.not_seen = false;
-        this.addLike(restaurant);
-    }
-  }
+    }*/
+}}

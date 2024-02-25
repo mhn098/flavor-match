@@ -18,7 +18,5 @@ export class MenuSelectComponent {
     canActivate: []
   };
 constructor(
-  public restaurantService: RestaurantService{
-public formCollector(city: string){
-}
+  public restaurantService: RestaurantService,){}
 }
