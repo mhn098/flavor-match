@@ -1,9 +1,4 @@
-<p>swipe works!</p>
-
-
-
-<body>
-    <!-- top bar -->
+<!-- <body>
     <div class="topleft">
     <img src="/assets/img/icon-only.png"
     width="50" 
@@ -15,11 +10,63 @@
         width="200" 
         height="50">
     </div>
-</body>
+</body> -->
+
+<!-- top bar -->
+<!-- <img src="/assets/img/fm-logo.png"> -->
 
 <!-- bottom tab -->
-<div class="bottom-bar"> 
-    <button (click)="restaurantService.menuSelectPage()">Swipes</button>
-    <button (click)="restaurantService.likedPage()">Picks</button>
-    <button (click)="restaurantService.reviewPage()">Reviews</button>
+<div>
+    <h2 class="label">Resturant Name</h2>
+    <p>{{ restaurantService.myData[restaurantService.id].name}}</p>
+    <h2 class="label">Resturant Cuisine</h2>
+    <p>{{ restaurantService.myData[restaurantService.id].cuisine}}</p>
+    <h2 class="label">Resturant Address</h2>
+    <p>{{ restaurantService.myData[restaurantService.id].address}}</p>
+    <h2 class="label">Resturant City</h2>
+    <p>{{ restaurantService.myData[restaurantService.id].city}}</p>
+    <h2 class="label">Resturant Phone Number</h2>
+    <p>{{ restaurantService.myData[restaurantService.id].phone_number}}</p>
+    <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'American'" src="/assets/img/american.png">
+    <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Asian'" src="/assets/img/asian.png">
+    <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Breakfast'" src="/assets/img/breakfast.png">
+    <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Coffee'" src="/assets/img/cafe.png">
+    <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Indian'" src="/assets/img/indian.png">
+    <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Italian'" src="/assets/img/italian.png">
+    <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Mexican'" src="/assets/img/mexican.png">
+    <button
+          mat-stroked-button
+          (click)="restaurantService.likeRestaurant()">
+          <img src="/assets/img/happy-reaction.png">
+        </button>
+        <button
+          mat-stroked-button
+          (click)="restaurantService.indifferentRestaurant()">
+          <img src="/assets/img/neutral-reaction.png">
+        </button>
+        <button
+        mat-stroked-button
+        (click)="restaurantService.dislikeRestaurant()">
+        <img src="/assets/img/sad-reaction.png">
+      </button>
+        <!-- <button
+          mat-stroked-button
+          (click)="productivityService.deleteTimer(pomodoro)">
+          Delete
+        </button>
+        <button
+          mat-stroked-button
+          (click)="productivityService.startButton(pomodoro)">
+          {{ productivityService.getButtonName(pomodoro) }}
+        </button>
+        <button mat-stroked-button (click)="pomodoro.pomodoro.pause()">
+          Pause
+        </button>
+      </div>
+      <button>
+        <a mat-list-item routerLink="edit/{{ pomodoro.timerId }}"
+          >Edit Pomodoro</a
+        >
+      </button> 
+    </mat-card>-->
 </div>

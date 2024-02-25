@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { restaurant_model } from "../restaurant_model";
 import { AppModule } from '../../app.module';
 import { RestaurantService } from '../restaurant.service';
 
@@ -10,14 +11,16 @@ import { RestaurantService } from '../restaurant.service';
   templateUrl: './review.component.html',
   styleUrl: './review.component.css'
 })
-export class ReviewComponent {
+export class ReviewComponent{
   public static Route = {
     path: 'restaurant/review',
     title: 'Review',
     component: ReviewComponent,
     canActivate: []
   };
-constructor(
-  public restaurantService: RestaurantService
-) {}
+
+  myData: restaurant_model[] = [];
+
+  constructor(public restaurantService: RestaurantService) {}
+
 }

@@ -6,6 +6,8 @@ import { MainPageComponent } from './restaurant/main-page/main-page.component';
 import { SwipeComponent } from './restaurant/swipe/swipe.component';
 import { LikedComponent } from './restaurant/liked/liked.component';
 import { ReviewComponent } from './restaurant/review/review.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { ReviewComponent } from './restaurant/review/review.component';
   imports: [
     CommonModule,
     AppRoutingModule,
-  ],
+    HttpClientModule
+  ]
 })
 export class AppModule { }
