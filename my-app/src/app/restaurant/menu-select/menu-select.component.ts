@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AppModule } from '../../app.module';
+import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-menu-select',
-  standalone: true,
-  imports: [],
+  // standalone: true,
+  // imports: [],
   templateUrl: './menu-select.component.html',
   styleUrl: './menu-select.component.css'
 })
@@ -15,4 +17,7 @@ export class MenuSelectComponent {
     component: MenuSelectComponent,
     canActivate: []
   };
+constructor(
+  public restaurantService: RestaurantService
+) {}
 }
