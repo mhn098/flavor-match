@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppModule } from '../../app.module';
 import { RestaurantService } from '../restaurant.service';
+import { restaurant_model } from '../restaurant_model';
 
 @Component({
   selector: 'app-swipe',
@@ -18,8 +19,22 @@ export class SwipeComponent {
     component: SwipeComponent,
     canActivate: []
   };
-  public restaurant: {} = {};
+  public index: number = 0;
 constructor(
   public restaurantService: RestaurantService
-) {this.restaurant = restaurantService.myData[restaurantService.id]}
+) {
+  restaurantService.filterData();
+}
+public hitlike(): void{
+  this.index += 1;
+  this.restaurantService.likeRestaurant(this.index);
+}
+public hitdislike(): void{
+  this.index += 1;
+  this.restaurantService.dislikeRestaurant(this.index);
+}
+public hitindifferent(): void{
+  this.index += 1;
+  this.restaurantService.indifferentRestaurant(this.index);
+}
 }
