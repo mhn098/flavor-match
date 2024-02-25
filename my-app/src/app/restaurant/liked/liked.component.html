@@ -1,14 +1,14 @@
 <div class="container">
     <div class="icons">
         <div class="topleft">
-            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage(); restaurantService.resetFilter()">
                 <img src="/assets/img/icon-only.png"
                 width="50" 
                 height="50">
             </button>
         </div>
         <div class="topright">
-            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage(); restaurantService.resetFilter()">
                 <img src="/assets/img/text-only.png"
                 width="120" 
                 height="50">
@@ -17,7 +17,7 @@
 
         <div class="grid-container">
             <div class="grid-item">
-                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.menuSelectPage()">
+                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.menuSelectPage(); restaurantService.resetFilter()">
                 <img src="/assets/img/match-button.png" alt="Match" class="small-image3">
                 </button>
             </div>
@@ -49,38 +49,38 @@
 <div class="grid-container3">
     <div class="grid-item3">
     <p *ngFor="let index of restaurantService.getLikedRestaurants()">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
-        {{restaurantService.myData[index].name}}
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+        {{restaurantService.myData[restaurantService.filtered_data[index]].name}}
     </p>
     </div>
     <div class="grid-item3">
     <p *ngFor="let index of restaurantService.getindifferentRestaurant()">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
-        {{restaurantService.myData[index].name}}
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+        {{restaurantService.myData[restaurantService.filtered_data[index]].name}}
     </p>
     </div>
     <div class="grid-item3">
     <p *ngFor="let index of restaurantService.getDisLikedRestaurants()">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
-        {{restaurantService.myData[index].name}}
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[restaurantService.filtered_data[index]].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+        {{restaurantService.myData[restaurantService.filtered_data[index]].name}}
     </p>
     </div>
 

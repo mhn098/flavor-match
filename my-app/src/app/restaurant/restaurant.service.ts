@@ -3805,14 +3805,6 @@ import { filter_model } from "./filter_model";
     id: number = 0;
     filtered_data: number[] = [];
     resultIndex: number = 0;
-
-    ame_count = 0;
-    cof_count = 0;
-    asi_count = 0;
-    mex_count = 0;
-    ita_count = 0;
-    bre_count = 0;
-    ind_count = 0;
     
     constructor(private router: Router){
       console.log('getting started');
@@ -3881,18 +3873,21 @@ import { filter_model } from "./filter_model";
       this.filtered_data = [];
       let i = 0;
       while(i < this.myData.length){
-        if(this.f.city == 'rtp' && this.f.cuisine == 'all'){
-          this.filtered_data.push(i);
-        }
-        else if(this.f.city == 'rtp' && this.myData[i].cuisine == this.f.cuisine){
-          this.filtered_data.push(i);
-        }
-        else if(this.myData[i].city == this.f.city && this.f.cuisine == 'all'){
-          this.filtered_data.push(i);
-        }
-        else if(this.myData[i].city == this.f.city && this.myData[i].cuisine == this.f.cuisine){
-          this.filtered_data.push(i);
-        }
+        if(this.checker(i)){
+          if(this.f.city == 'rtp' && this.f.cuisine == 'all'){
+            
+            this.filtered_data.push(i);
+            }
+          else if(this.f.city == 'rtp' && this.myData[i].cuisine == this.f.cuisine){
+            this.filtered_data.push(i);
+          }
+          else if(this.myData[i].city == this.f.city && this.f.cuisine == 'all'){
+            this.filtered_data.push(i);
+          }
+          else if(this.myData[i].city == this.f.city && this.myData[i].cuisine == this.f.cuisine){
+            this.filtered_data.push(i);
+          }
+      }
         i++; //looping through myData
       }
       // console.log(this.filtered_data);
@@ -3902,6 +3897,31 @@ import { filter_model } from "./filter_model";
         console.log('no such filter')
         this.resetFilter();
       }
+    }
+
+    public checker(index: number): boolean {
+      let i = 0;
+      let j = 0;
+      let k = 0;
+      while (i< this.liked.length){
+        if(index == this.liked[i]){
+            return false;
+        }
+        i++;
+      }
+      while (j< this.indifferent.length){
+        if(index == this.indifferent[j]){
+            return false;
+        }
+        j++;
+      }
+      while (k< this.disliked.length){
+        if(index == this.disliked[k]){
+            return false;
+        }
+        k++;
+      }
+      return true;
     }
 
     public result(index: number): void {
