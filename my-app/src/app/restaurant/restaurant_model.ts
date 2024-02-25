@@ -7,5 +7,9 @@ export interface restaurant_model {
   cuisine: string;
   is_fast_food: boolean;
   is_breakast: boolean;
+  is_fastfood: boolean;
+  preference: number;
+  city: string;
+  not_seen: boolean;
 }
 

@@ -5,8 +5,8 @@ import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-menu-select',
-  // standalone: true,
-  // imports: [],
+  standalone: true,
+  imports: [],
   templateUrl: './menu-select.component.html',
   styleUrl: './menu-select.component.css'
 })
@@ -20,4 +20,9 @@ export class MenuSelectComponent {
 constructor(
   public restaurantService: RestaurantService
 ) {}
+
+public formCollector(city: string){
+  
+
+}
 }

@@ -4,8 +4,8 @@ import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-liked',
-  // standalone: true,
-  // imports: [],
+  standalone: true,
+  imports: [],
   templateUrl: './liked.component.html',
   styleUrl: './liked.component.css'
 })
