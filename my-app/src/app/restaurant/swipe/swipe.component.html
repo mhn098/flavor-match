@@ -38,13 +38,13 @@
         </div>
     </div>
         <div class="reaction-buttons">
-            <button mat-stroked-button (click)="restaurantService.likeRestaurant()">
+            <button mat-stroked-button (click)="this.hitlike()">
                 <img src="/assets/img/happy-reaction.png" class="small-image1">
             </button>
-            <button mat-stroked-button (click)="restaurantService.indifferentRestaurant()">
+            <button mat-stroked-button (click)="this.hitdislike()">
                 <img src="/assets/img/neutral-reaction.png" class="small-image1">
             </button>
-            <button mat-stroked-button (click)="restaurantService.dislikeRestaurant()">
+            <button mat-stroked-button (click)="this.hitindifferent()">
                 <img src="/assets/img/sad-reaction.png" class="small-image1">
             </button>
         </div>
