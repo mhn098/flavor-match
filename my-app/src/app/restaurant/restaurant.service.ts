@@ -3795,8 +3795,8 @@ import { filter_model } from "./filter_model";
       }
     ]
     f: filter_model = {
-      city: 'RTP',
-      cuisine: 'ALL'
+      city: 'rtp',
+      cuisine: 'all'
     }
     liked: number[] = [];
     disliked: number[] = [];
@@ -3804,10 +3804,19 @@ import { filter_model } from "./filter_model";
     seen: number[] = [];
     id: number = 0;
     filtered_data: number[] = [];
+
+    ame_count = 0;
+    cof_count = 0;
+    asi_count = 0;
+    mex_count = 0;
+    ita_count = 0;
+    bre_count = 0;
+    ind_count = 0;
     
     constructor(private router: Router){
+      console.log('getting started');
       for(let i = 0; i < this.myData.length; i++){
-        this.filtered_data.push(i);}
+        this.filtered_data.push(i);} 
     }
 
     public mainPage() {
@@ -3883,6 +3892,25 @@ import { filter_model } from "./filter_model";
         }
         i++; //looping through myData
       }
+      console.log(this.filtered_data);
+      if(i >=1 && this.filtered_data.length == 0){
+        console.log('no such filter')
+        this.resetFilter();
+      }
+    }
+
+      public resetFilter(){
+        console.log('reset filter');
+        // this.f.city = 'rtp';
+        // this.f.cuisine = 'all';
+        console.log(this.f.city);
+        console.log(this.f.cuisine);
+        this.filtered_data = [];
+        this.liked = [];
+        this.disliked = [];
+        this.indifferent = [];
+        for(let i = 0; i < this.myData.length; i++){
+          this.filtered_data.push(i);} 
       }
 
     public getRestaurants(): {}[]{

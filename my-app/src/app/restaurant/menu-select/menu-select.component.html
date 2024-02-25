@@ -1,12 +1,12 @@
 <div class="container">
 <div class="icons">
     <div class="topleft">
-        <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+        <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage(); restaurantService.resetFilter()">
             <img src="/assets/img/icon-only.png" width="50" height="50">
         </button>
     </div>
     <div class="topright">
-        <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+        <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage(); restaurantService.resetFilter()">
             <img src="/assets/img/text-only.png" width="120" height="50">
         </button>
     </div>
@@ -33,19 +33,19 @@
             <h2>Select City:</h2>
             <select #city id="city" name="city">
                 <option value="rtp">RTP</option>
-                <option value="chapel-hill">Chapel Hill</option>
-                <option value="durham">Durham</option>
-                <option value="raleigh">Raleigh</option>
+                <option value="CHAPEL HILL">Chapel Hill</option>
+                <option value="DURHAM">Durham</option>
+                <option value="RALEIGH">Raleigh</option>
             </select>
             <br><br>
             <h2>Select Cuisine:</h2>
             <select #cuisine id="cuisine" name="cuisine">
                 <option value="all">All</option>
-                <option value="american">American</option>
-                <option value="asian">Asian</option>
-                <option value="indian">Indian</option>
-                <option value="italian">Italian</option>
-                <option value="mexican">Mexican</option>
+                <option value="American">American</option>
+                <option value="Asian">Asian</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="Mexican">Mexican</option>
             </select>
             <br><br>
             <button type="button" class="hoverable" (click)="filter(city.value, cuisine.value)">Filter</button>
