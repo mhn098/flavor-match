@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import * as Papa from 'papaparse';
 import { Observable } from "rxjs";
+import { filter_model } from "./filter_model";
 
 
 @Injectable({
@@ -3793,7 +3794,10 @@ import { Observable } from "rxjs";
         "is_breakfast": false
       }
     ]
-
+    f: filter_model = {
+      city: '',
+      cuisine: ''
+    }
     liked: {}[] = [];
     disliked: {}[] = [];
     indifferent: {}[] = [];
@@ -3804,11 +3808,17 @@ import { Observable } from "rxjs";
     dislike: restaurant_model[] = [];
     neutral: restaurant_model[] = [];
     like: restaurant_model[] = [];
-    all: restaurant_model[] = [];
 
 
     public mainPage() {
       this.router.navigate(['/restaurant/main-page']);
+  }
+
+  public filterS(i_city: string, i_cuisine: string){
+    this.f.city = i_city;
+    this.f.cuisine = i_cuisine;
+    console.log(this.f.city);
+    console.log(this.f.cuisine);
   }
 
     public menuSelectPage() {
