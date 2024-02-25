@@ -3935,6 +3935,12 @@ import { filter_model } from "./filter_model";
       this.id += 1;
     }
 
-    public roulette(): {}{
+    public roulette(){
       return this.liked[Math.floor(Math.random() * this.liked.length)];
-}}
+}
+    public randomGenerator(){
+      let result = this.myData[this.roulette()].name;
+      console.log(result);
+      return result;
+    }
+}
