@@ -15,7 +15,7 @@
 }
 
 .bottom-bar {
-    margin-top: 45px;
+    margin-top: 120px;
 }
 
 .glow:hover {
@@ -50,4 +50,13 @@ button.non-hoverable {
 
 .glow {
     margin-top: -100px;
+}
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+}
+
+.text {
+    margin-top: -20px;
 }
