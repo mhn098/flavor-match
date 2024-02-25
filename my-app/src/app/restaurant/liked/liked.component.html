@@ -1,28 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: rgb(241, 76, 76);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
 <body>
-<!-- top bar -->
+
+<!-- Top bar -->
 <div class="topleft">
-<img src="/assets/img/icon-only.png"
-width="50" 
-height="50">
+    <img src="/assets/img/icon-only.png" width="50" height="50">
 </div>
 
 <div class="topright">
-    <img src="/assets/img/text-only.png"
-    width="120" 
-    height="50">
+    <img src="/assets/img/text-only.png" width="120" height="50">
 </div>
-<!-- </body> -->
 
-<!-- <p>liked works!</p> -->
-
-<!-- bottom tab -->
-<!-- <div class="bottom-bar">
-    <button (click)="restaurantService.menuSelectPage()">Swipes</button>
-    <button (click)="restaurantService.likedPage()">Picks</button>
-    <button (click)="restaurantService.reviewPage()">Reviews</button>
-</div> -->
-
+<!-- Bottom tab -->
 <div class="bottom-bar">
     <div id="bottom-container">
         <div class="grid-container">
@@ -38,4 +54,35 @@ height="50">
         </div>
     </div>
 </div>
+
+<!-- Collapsible Section -->
+<!-- <button type="button" class="collapsible">Loved</button>
+<div class="content">
+  <p>You loved these restaurants.</p>
+  
+</div>
+
+<br><br>
+
+<button type="button" class="collapsible">Whatever</button>
+<div class="content">
+  <p>You're indifferent about these restaurants.</p>
+</div>
+
+<br><br>
+
+<button type="button" class="collapsible">Disliked</button>
+<div class="content">
+  <p>You're not in the mood for these.</p>
+</div> -->
+
+<h2>Liked restaurants:</h2>
+<p *ngFor="let index of restaurantService.liked">
+    Name: {{restaurantService.myData[index].name}}
+</p>
+
+
 </body>
+</html>
+
+

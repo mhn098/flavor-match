@@ -3798,7 +3798,7 @@ import { filter_model } from "./filter_model";
       city: 'RTP',
       cuisine: 'ALL'
     }
-    liked: {}[] = [];
+    liked: number[] = [];
     disliked: {}[] = [];
     indifferent: {}[] = [];
     seen: number[] = [];
@@ -3809,9 +3809,9 @@ import { filter_model } from "./filter_model";
       for(let i = 0; i < this.myData.length; i++){
         this.filtered_data.push(i);}
     }
-    dislike: restaurant_model[] = [];
-    neutral: restaurant_model[] = [];
-    like: restaurant_model[] = [];
+    // dislike: restaurant_model[] = [];
+    // neutral: restaurant_model[] = [];
+    // like: restaurant_model[] = [];
 
 
     public mainPage() {
@@ -3841,7 +3841,7 @@ import { filter_model } from "./filter_model";
     public likeRestaurant(index: number){
       //if statement for liked restaurants
       this.isSeen();
-      this.liked.push(this.myData[index]);
+      this.liked.push(index);
     }
 
     public getLikedRestaurants(): {}[]{
