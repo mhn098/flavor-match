@@ -1,13 +1,41 @@
-<p>liked works!</p>
 
-
-
+<body>
 <!-- top bar -->
-<img src="/assets/img/fm-logo.png">
+<div class="topleft">
+<img src="/assets/img/icon-only.png"
+width="50" 
+height="50">
+</div>
+
+<div class="topright">
+    <img src="/assets/img/text-only.png"
+    width="120" 
+    height="50">
+</div>
+<!-- </body> -->
+
+<!-- <p>liked works!</p> -->
 
 <!-- bottom tab -->
-<div class="bottom-bar">
+<!-- <div class="bottom-bar">
     <button (click)="restaurantService.menuSelectPage()">Swipes</button>
     <button (click)="restaurantService.likedPage()">Picks</button>
     <button (click)="restaurantService.reviewPage()">Reviews</button>
+</div> -->
+
+<div class="bottom-bar">
+    <div id="bottom-container">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="/assets/img/match-button.png" alt="Match" (click)="restaurantService.menuSelectPage()" class="small-image">
+            </div>
+            <div class="grid-item">
+                <img src="/assets/img/rank-button.png" alt="Rank" (click)="restaurantService.likedPage()" class="small-image">
+            </div>
+            <div class="grid-item">
+                <img src="/assets/img/review-button.png" alt="Review" (click)="restaurantService.reviewPage()" class="small-image">
+            </div>
+        </div>
+    </div>
 </div>
+</body>
