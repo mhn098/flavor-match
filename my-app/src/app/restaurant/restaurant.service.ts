@@ -3804,6 +3804,7 @@ import { filter_model } from "./filter_model";
     seen: number[] = [];
     id: number = 0;
     filtered_data: number[] = [];
+    resultIndex: number = 0;
 
     ame_count = 0;
     cof_count = 0;
@@ -3892,6 +3893,17 @@ import { filter_model } from "./filter_model";
         }
         i++; //looping through myData
       }
+    }
+
+    public result(index: number): void {
+      this.resultIndex = index;
+      this.router.navigate(['/restaurant/result']);
+    }
+
+    public getResult(): number {
+      return this.resultIndex;
+    }
+
       console.log(this.filtered_data);
       if(i >=1 && this.filtered_data.length == 0){
         console.log('no such filter')

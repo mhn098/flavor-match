@@ -1,14 +1,5 @@
-.topright {
-    float: right;
-    background-color: transparent; 
-    border: none; 
-    outline: none;
-    cursor: pointer; 
-    transition: filter 0.3s ease;
-}
-
-.topleft {
-    float: left;
+.middle {
+    /* float: left; */
     background-color: transparent; 
     border: none; 
     outline: none;
@@ -16,17 +7,7 @@
     transition: filter 0.3s ease;
 }
 
-.grid-item {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: filter 0.3s ease;
-}
-
-.topright:hover,
-.topleft:hover,
-.grid-item:hover {
+.topleft:hover {
     filter: brightness(120%);
 }
 
@@ -41,17 +22,17 @@
     height: 615px;
 }
 
-.content {
+/* .content {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     max-width: 600px;
     margin: 0 auto;
-}
+} */
 
-.restaurant-details {
+/* .restaurant-details {
     flex-grow: 1;
-}
+} */
 
 .cuisine-images {
     display: flex;
@@ -59,7 +40,7 @@
     margin-top: 75px;
 }
 
-.reaction-buttons button {
+/* .reaction-buttons button {
     margin: 0 24px;
     height: 150px;
     width: 150px;
@@ -73,7 +54,7 @@
 
 .reaction-buttons button:hover {
     filter: brightness(120%);
-}
+} */
 
 .column {
     display: flex;
@@ -95,6 +76,11 @@
     margin-top: -32px;
 }
 
+.small-image3 {
+    height: 50px;
+    width: 150px;
+}
+
 h2 {
     font-size: 18px;
 }
@@ -114,11 +100,6 @@ button {
 
 button.non-hoverable {
     background-color: transparent;
-}
-
-.small-image3 {
-    height: 50px;
-    width: 150px;
 }
 
 .grid-item {
