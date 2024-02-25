@@ -5,8 +5,8 @@ import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-main-page',
-  // standalone: true,
-  // imports: [],
+  standalone: true,
+  imports: [],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'
 })

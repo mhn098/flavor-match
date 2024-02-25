@@ -7,9 +7,10 @@ import { Router } from '@angular/router';
   })
   export class RestaurantService {
     constructor(private router: Router){}
-    liked: restaurant_model[] = [];
-    filter: restaurant_model[] = [];
-
+    dislike: restaurant_model[] = [];
+    neutral: restaurant_model[] = [];
+    like: restaurant_model[] = [];
+    all: restaurant_model[] = [];
 
     public mainPage() {
       this.router.navigate(['/restaurant/main-page']);
@@ -27,14 +28,46 @@ import { Router } from '@angular/router';
       this.router.navigate(['/restaurant/review']);
   }
 
-    public likeRestaurant(restaurant: restaurant_model){
-      //if statement for liked restaurants
-      this.liked.push(restaurant);
+    public addDislike(restaurant: restaurant_model){
+      this.dislike.push(restaurant);
     }
 
-    public getLikedRestaurants(): restaurant_model[]{
-      return this.liked;
+    public getDislike(): restaurant_model[]{
+      return this.dislike;
     }
 
+    public addNeutral(restaurant: restaurant_model){
+        this.neutral.push(restaurant);
+      }
+  
+    public getNeutral(): restaurant_model[]{
+    return this.neutral;
+    }
 
+    public addLike(restaurant: restaurant_model){
+        this.like.push(restaurant);
+      }
+  
+    public getLike(): restaurant_model[]{
+    return this.like;
+    }
+    
+    public filterCity(city: string){
+        // take input from menu-select
+    }
+
+    public dislikeButton(restaurant: restaurant_model) {
+        restaurant.not_seen = false;
+        this.addDislike(restaurant);
+    }
+
+    public neutralButton(restaurant: restaurant_model) {
+        restaurant.not_seen = false;
+        this.addNeutral(restaurant);
+    }
+
+    public likeButton(restaurant: restaurant_model) {
+        restaurant.not_seen = false;
+        this.addLike(restaurant);
+    }
   }

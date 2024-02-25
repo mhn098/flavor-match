@@ -5,8 +5,8 @@ import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-swipe',
-  // standalone: true,
-  // imports: [],
+  standalone: true,
+  imports: [],
   templateUrl: './swipe.component.html',
   styleUrl: './swipe.component.css'
 })
