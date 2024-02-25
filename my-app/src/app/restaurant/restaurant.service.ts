@@ -1,11 +1,11 @@
 import { Injectable } from "@angular/core";
 import { restaurant_model } from "./restaurant_model";
 import { Router } from '@angular/router';
+import { filter_model } from "./filter_model";
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import * as Papa from 'papaparse';
 import { Observable } from "rxjs";
-
 
 @Injectable({
     providedIn: 'root'
@@ -3771,10 +3771,13 @@ import { Observable } from "rxjs";
     id: number = 0;
     
     constructor(private router: Router){}
+    f: filter_model = {
+      city: '',
+      cuisine: ''
+    }
     dislike: restaurant_model[] = [];
     neutral: restaurant_model[] = [];
     like: restaurant_model[] = [];
-    all: restaurant_model[] = [];
 
 
     public mainPage() {
@@ -3802,6 +3805,14 @@ import { Observable } from "rxjs";
     public getLikedRestaurants(): {}[]{
       return this.liked;
     }
+
+    public filterS(i_city: string, i_cuisine: string){
+      this.f.city = i_city;
+      this.f.cuisine = i_cuisine;
+      console.log(this.f.city);
+      console.log(this.f.cuisine);
+    }
+  }
 
     public dislikeRestaurant(){
       //if statement for liked restaurants
