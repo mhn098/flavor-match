@@ -3798,9 +3798,9 @@ import { filter_model } from "./filter_model";
       city: 'RTP',
       cuisine: 'ALL'
     }
-    liked: {}[] = [];
-    disliked: {}[] = [];
-    indifferent: {}[] = [];
+    liked: number[] = [];
+    disliked: number[] = [];
+    indifferent: number[] = [];
     seen: number[] = [];
     id: number = 0;
     filtered_data: number[] = [];
@@ -3809,10 +3809,6 @@ import { filter_model } from "./filter_model";
       for(let i = 0; i < this.myData.length; i++){
         this.filtered_data.push(i);}
     }
-    dislike: restaurant_model[] = [];
-    neutral: restaurant_model[] = [];
-    like: restaurant_model[] = [];
-
 
     public mainPage() {
       this.router.navigate(['/restaurant/main-page']);
@@ -3841,51 +3837,53 @@ import { filter_model } from "./filter_model";
     public likeRestaurant(index: number){
       //if statement for liked restaurants
       this.isSeen();
-      this.liked.push(this.myData[index]);
+      this.liked.push(index);
+      console.log(index);
     }
 
-    public getLikedRestaurants(): {}[]{
+    public getLikedRestaurants(): number[]{
       return this.liked;
     }
 
     public dislikeRestaurant(index: number){
       //if statement for liked restaurants
       this.isSeen();
-      this.disliked.push(this.myData[index]);
+      this.disliked.push(index);
     }
 
-    public getDisLikedRestaurants(): {}[]{
-      return this.liked;
+    public getDisLikedRestaurants(): number[]{
+      return this.disliked;
     }
 
     public indifferentRestaurant(index: number){
       //if statement for liked restaurants
       this.isSeen();
-      this.indifferent.push(this.myData[index]);
+      this.indifferent.push(index);
     }
 
-    public getindifferentRestaurant(): {}[]{
+    public getindifferentRestaurant(): number[]{
       return this.indifferent;
     }
 
     public filterData(): void{
-      let index = 0;
-      for(var resturant of this.myData){
-        if(this.f.city == 'RTP' && this.f.cuisine == 'All'){
-          this.filtered_data.push(index);
+      this.filtered_data = [];
+      let i = 0;
+      while(i < this.myData.length){
+        if(this.f.city == 'rtp' && this.f.cuisine == 'all'){
+          this.filtered_data.push(i);
         }
-        else if(this.f.city == 'RTP' && resturant.cuisine == this.f.cuisine){
-          this.filtered_data.push(index);
+        else if(this.f.city == 'rtp' && this.myData[i].cuisine == this.f.cuisine){
+          this.filtered_data.push(i);
         }
-        else if(resturant.city == this.f.city && this.f.cuisine == 'All'){
-          this.filtered_data.push(index);
+        else if(this.myData[i].city == this.f.city && this.f.cuisine == 'all'){
+          this.filtered_data.push(i);
         }
-        else if(resturant.city == this.f.city && resturant.cuisine == this.f.cuisine){
-          this.filtered_data.push(index);
+        else if(this.myData[i].city == this.f.city && this.myData[i].cuisine == this.f.cuisine){
+          this.filtered_data.push(i);
         }
-        index += 1;
+        i++; //looping through myData
       }
-    }
+      }
 
     public getRestaurants(): {}[]{
       return this.myData;
@@ -3895,52 +3893,6 @@ import { filter_model } from "./filter_model";
       this.id += 1;
     }
 
-    /*public getNotSeenRestaurants(): {}[]{
-      let list: {}[] = [];
-      let index = 0;
-      while(index < this.myData.length){
-        if(index not In this.seen){
-          list.push(this.myData[index]);
-        }
-      }
-      return list;
-    }*/
-
     public roulette(): {}{
       return this.liked[Math.floor(Math.random() * this.liked.length)];
-
-    /*public addDislike(restaurant: restaurant_model): {
-      this.dislike.push(restaurant);
-    }
-
-    public getDislike(): restaurant_model[]{
-      return this.dislike;
-    }
-
-    public addNeutral(restaurant: restaurant_model){
-        this.neutral.push(restaurant);
-      }
-  
-    public getNeutral(): restaurant_model[]{
-    return this.neutral;
-    }
-
-    public addLike(restaurant: restaurant_model){
-        this.like.push(restaurant);
-      }
-  
-    public getLike(): restaurant_model[]{
-    return this.like;
-    }
-
-    public dislikeButton(restaurant: restaurant_model) {
-        restaurant.not_seen = false;
-        this.addDislike(restaurant);
-    }
-
-    public neutralButton(restaurant: restaurant_model) {
-        restaurant.not_seen = false;
-        this.addNeutral(restaurant);
-
-    }*/
 }}
