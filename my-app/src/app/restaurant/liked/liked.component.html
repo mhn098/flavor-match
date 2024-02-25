@@ -1,57 +1,3 @@
-<!-- <div class="container">
-    <div class="icons">
-        <div class="topleft">
-            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
-                <img src="/assets/img/icon-only.png"
-                width="50" 
-                height="50">
-            </button>
-        </div>
-        <div class="topright">
-            <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
-                <img src="/assets/img/text-only.png"
-                width="120" 
-                height="50">
-            </button>
-        </div>
-
-        <div class="grid-container">
-            <div class="grid-item">
-                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.menuSelectPage()">
-                <img src="/assets/img/match-button.png" alt="Match" class="small-image3">
-                </button>
-            </div>
-            <div class="grid-item">
-                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.likedPage()">
-                <img src="/assets/img/rank-button.png" alt="Rank" class="small-image3">
-                </button>
-            </div>
-            <div class="grid-item">
-                <button mat-stroked-button class="non-hoverable" (click)="restaurantService.reviewPage()">
-                <img src="/assets/img/review-button.png" alt="Review" class="small-image3">
-                </button>
-            </div>
-        </div>
-    </div>
-
-<div class="grid-container">
-    <div class="grid-item">
-        <button mat-stroked-button class="non-hoverable">
-        <img src="/assets/img/happy-reaction.png" alt="Like" class="small-image1">
-        </button>
-    </div>
-    <div class="grid-item">
-        <button mat-stroked-button class="non-hoverable">
-        <img src="/assets/img/neutral-reaction.png" alt="Neutral" class="small-image1">
-        </button>
-    </div>
-    <div class="grid-item">
-        <button mat-stroked-button class="non-hoverable">
-        <img src="/assets/img/sad-reaction.png" alt="Dislike" class="small-image1">
-        </button>
-    </div>
-</div> -->
-
 <div class="container">
     <div class="icons">
         <div class="topleft">
@@ -113,7 +59,6 @@
         {{restaurantService.myData[index].name}}
     </p>
     </div>
-
     <div class="grid-item3">
     <p *ngFor="let index of restaurantService.getindifferentRestaurant()">
         <img *ngIf="restaurantService.myData[index-1].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
@@ -126,7 +71,6 @@
         {{restaurantService.myData[index].name}}
     </p>
     </div>
-
     <div class="grid-item3">
     <p *ngFor="let index of restaurantService.getDisLikedRestaurants()">
         <img *ngIf="restaurantService.myData[index-1].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
