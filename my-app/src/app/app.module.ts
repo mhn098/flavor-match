@@ -7,19 +7,17 @@ import { SwipeComponent } from './restaurant/swipe/swipe.component';
 import { LikedComponent } from './restaurant/liked/liked.component';
 import { ReviewComponent } from './restaurant/review/review.component';
 
-
-
 @NgModule({
   declarations: [
-    MenuSelectComponent,
-    MainPageComponent,
-    SwipeComponent,
-    LikedComponent,
-    ReviewComponent
+    // MenuSelectComponent,
+    // MainPageComponent,
+    // SwipeComponent,
+    // LikedComponent,
+    // ReviewComponent,
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
-  ]
+    AppRoutingModule,
+  ],
 })
 export class AppModule { }

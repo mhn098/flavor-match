@@ -1,7 +1,13 @@
 <p>swipe works!</p>
 
-<!-- top bar widget -->
-<top-bar-widget></top-bar-widget>
 
-<!-- bottom bar widget -->
-<bottom-tab-widget></bottom-tab-widget>
+
+<!-- top bar -->
+<img src="/assets/img/fm-logo.png">
+
+<!-- bottom tab -->
+<div class="bottom-bar"> 
+    <button (click)="restaurantService.menuSelectPage()">Swipes</button>
+    <button (click)="restaurantService.likedPage()">Picks</button>
+    <button (click)="restaurantService.reviewPage()">Reviews</button>
+</div>

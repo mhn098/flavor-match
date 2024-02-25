@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AppModule } from '../../app.module';
+import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-main-page',
-  standalone: true,
-  imports: [],
+  // standalone: true,
+  // imports: [],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.css'
 })
@@ -15,4 +17,7 @@ export class MainPageComponent {
     component: MainPageComponent,
     canActivate: []
   };
+constructor(
+  public restaurantService: RestaurantService
+) {}
 }
