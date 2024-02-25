@@ -55,32 +55,20 @@
     </div>
 </div>
 
-<!-- Collapsible Section -->
-<!-- <button type="button" class="collapsible">Loved</button>
-<div class="content">
-  <p>You loved these restaurants.</p>
-  
-</div>
-
-<br><br>
-
-<button type="button" class="collapsible">Whatever</button>
-<div class="content">
-  <p>You're indifferent about these restaurants.</p>
-</div>
-
-<br><br>
-
-<button type="button" class="collapsible">Disliked</button>
-<div class="content">
-  <p>You're not in the mood for these.</p>
-</div> -->
-
-<h2>Liked restaurants:</h2>
-<p *ngFor="let index of restaurantService.liked">
+<h2>Craving:</h2>
+<p *ngFor="let index of restaurantService.getLikedRestaurants()">
     Name: {{restaurantService.myData[index].name}}
 </p>
 
+<h2>Indifferent about:</h2>
+<p *ngFor="let index of restaurantService.getDisLikedRestaurants()">
+    Name: {{restaurantService.myData[index].name}}
+</p>
+
+<h2>Not in the mood for:</h2>
+<p *ngFor="let index of restaurantService.getDisLikedRestaurants()">
+    Name: {{restaurantService.myData[index].name}}
+</p>
 
 </body>
 </html>
