@@ -3,7 +3,7 @@ import { restaurant_model } from "./restaurant_model";
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import * as Papa from 'papaparse';
+// import * as Papa from 'papaparse';
 import { Observable } from "rxjs";
 import { filter_model } from "./filter_model";
 

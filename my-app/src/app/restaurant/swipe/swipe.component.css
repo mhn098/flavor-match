@@ -1,17 +1,79 @@
-body {
-	background-size: cover;
-	background-position: center;
-	background-image: url(/assets/img/trial-bg.png);
-	background-color: #ffd6e9;
-	color: #000000;
-    text-align: center;
-	margin-top: 0px;
-}
-
 .topright {
     float: right;
-  }
+}
 
 .topleft {
     float: left;
+}
+
+.container {
+    /* position: relative; */
+    background-size: cover;
+	background-position: center;
+	background-image: url(/assets/img/trial-bg.png);
+    width: auto;
+    height: auto;
+    /* min-height: 100vh;
+    padding: 20px; */
+}
+
+.content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.restaurant-details {
+    flex-grow: 1;
+}
+
+.cuisine-images {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 75px;
+}
+
+.reaction-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    height: 150px;
+}
+
+.reaction-buttons button {
+    margin: 0 24px;
+    height: 150px;
+    width: 150px;
+}
+
+/* .top {
+    justify-content: space-between;
+} */
+
+.column {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: -50px;
+    height: 500px;
+}
+
+.small-image1 {
+    height: 150px;
+    width: 150px;
+}
+
+.small-image2 {
+    height: 300px;
+    width: 300px;
+}
+
+h2 {
+    font-size: 22px;
+}
+  
+p {
+    font-size: 14px;
 }
