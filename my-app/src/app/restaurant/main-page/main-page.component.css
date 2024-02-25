@@ -15,7 +15,7 @@
 }
 
 .bottom-bar {
-    margin-top: 20px;
+    margin-top: 120px;
 }
 
 .glow:hover {
@@ -23,8 +23,8 @@
 }
 
 .small-image1 {
-    height: 50px;
-    width: 115px;
+    height: 60px;
+    width: 125px;
 }
 
 button {
@@ -46,4 +46,17 @@ button.hoverable:hover {
 
 button.non-hoverable {
     background-color: transparent;
+}
+
+.glow {
+    margin-top: -100px;
+}
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+}
+
+.text {
+    margin-top: -20px;
 }

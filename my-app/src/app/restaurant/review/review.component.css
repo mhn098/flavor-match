@@ -105,3 +105,26 @@ button.non-hoverable {
     display: grid;
     grid-template-columns: auto auto auto;
 }
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.space {
+    margin-top: 25px;
+}
+
+.small-image {
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.middle:hover {
+    filter: brightness(120%)
+}
+
+.middle {
+    margin-bottom: 21px;
+}
