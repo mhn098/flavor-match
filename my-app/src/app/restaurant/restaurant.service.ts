@@ -3817,7 +3817,6 @@ import { filter_model } from "./filter_model";
   public filterS(i_city: string, i_cuisine: string){
     this.f.city = i_city;
     this.f.cuisine = i_cuisine;
-    this.filterData();
     console.log(this.f.city);
     console.log(this.f.cuisine);
     this.router.navigate(['/restaurant/swipe']);
@@ -3867,23 +3866,24 @@ import { filter_model } from "./filter_model";
     }
 
     public filterData(): void{
-      let index = 0;
-      for(let resturant of this.myData){
-        if(this.f.city == 'RTP' && this.f.cuisine == 'All'){
-          this.filtered_data.push(index);
+      this.filtered_data = [];
+      let i = 0;
+      while(i < this.myData.length){
+        if(this.f.city == 'rtp' && this.f.cuisine == 'all'){
+          this.filtered_data.push(i);
         }
-        else if(this.f.city == 'RTP' && resturant.cuisine == this.f.cuisine){
-          this.filtered_data.push(index);
+        else if(this.f.city == 'rtp' && this.myData[i].cuisine == this.f.cuisine){
+          this.filtered_data.push(i);
         }
-        else if(resturant.city == this.f.city && this.f.cuisine == 'All'){
-          this.filtered_data.push(index);
+        else if(this.myData[i].city == this.f.city && this.f.cuisine == 'all'){
+          this.filtered_data.push(i);
         }
-        else if(resturant.city == this.f.city && resturant.cuisine == this.f.cuisine){
-          this.filtered_data.push(index);
+        else if(this.myData[i].city == this.f.city && this.myData[i].cuisine == this.f.cuisine){
+          this.filtered_data.push(i);
         }
-        index += 1;
+        i++; //looping through myData
       }
-    }
+      }
 
     public getRestaurants(): {}[]{
       return this.myData;
@@ -3893,52 +3893,6 @@ import { filter_model } from "./filter_model";
       this.id += 1;
     }
 
-    /*public getNotSeenRestaurants(): {}[]{
-      let list: {}[] = [];
-      let index = 0;
-      while(index < this.myData.length){
-        if(index not In this.seen){
-          list.push(this.myData[index]);
-        }
-      }
-      return list;
-    }*/
-
     public roulette(): {}{
       return this.liked[Math.floor(Math.random() * this.liked.length)];
-
-    /*public addDislike(restaurant: restaurant_model): {
-      this.dislike.push(restaurant);
-    }
-
-    public getDislike(): restaurant_model[]{
-      return this.dislike;
-    }
-
-    public addNeutral(restaurant: restaurant_model){
-        this.neutral.push(restaurant);
-      }
-  
-    public getNeutral(): restaurant_model[]{
-    return this.neutral;
-    }
-
-    public addLike(restaurant: restaurant_model){
-        this.like.push(restaurant);
-      }
-  
-    public getLike(): restaurant_model[]{
-    return this.like;
-    }
-
-    public dislikeButton(restaurant: restaurant_model) {
-        restaurant.not_seen = false;
-        this.addDislike(restaurant);
-    }
-
-    public neutralButton(restaurant: restaurant_model) {
-        restaurant.not_seen = false;
-        this.addNeutral(restaurant);
-
-    }*/
 }}

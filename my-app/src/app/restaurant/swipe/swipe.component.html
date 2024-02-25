@@ -24,24 +24,24 @@
         <div class="column">
         <div class="restaurant-details">
             <h2 class="label">Restaurant Name</h2>
-            <p>{{ restaurantService.myData[restaurantService.id].name}}</p>
+            <p>{{ restaurantService.myData[restaurantService.filtered_data[this.index]].name}}</p>
             <h2 class="label">Restaurant Cuisine</h2>
-            <p>{{ restaurantService.myData[restaurantService.id].cuisine}}</p>
+            <p>{{ restaurantService.myData[restaurantService.filtered_data[this.index]].cuisine}}</p>
             <h2 class="label">Restaurant Address</h2>
-            <p>{{ restaurantService.myData[restaurantService.id].address}}</p>
+            <p>{{ restaurantService.myData[restaurantService.filtered_data[this.index]].address}}</p>
             <h2 class="label">Restaurant City</h2>
-            <p>{{ restaurantService.myData[restaurantService.id].city}}</p>
+            <p>{{ restaurantService.myData[restaurantService.filtered_data[this.index]].city}}</p>
             <h2 class="label">Restaurant Phone Number</h2>
-            <p>{{ restaurantService.myData[restaurantService.id].phone_number}}</p>
+            <p>{{ restaurantService.myData[restaurantService.filtered_data[this.index]].phone_number}}</p>
         </div>
         <div class="cuisine-images">
-            <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
-            <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
-            <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
-            <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
-            <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
-            <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
-            <img *ngIf="restaurantService.myData[restaurantService.id].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+            <img *ngIf="restaurantService.myData[restaurantService.filtered_data[this.index]].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+            <img *ngIf="restaurantService.myData[restaurantService.filtered_data[this.index]].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+            <img *ngIf="restaurantService.myData[restaurantService.filtered_data[this.index]].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+            <img *ngIf="restaurantService.myData[restaurantService.filtered_data[this.index]].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+            <img *ngIf="restaurantService.myData[restaurantService.filtered_data[this.index]].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+            <img *ngIf="restaurantService.myData[restaurantService.filtered_data[this.index]].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+            <img *ngIf="restaurantService.myData[restaurantService.filtered_data[this.index]].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
         </div>
     </div>
         <div class="reaction-buttons">
