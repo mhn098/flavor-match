@@ -3859,6 +3859,7 @@ import { filter_model } from "./filter_model";
       //if statement for liked restaurants
       this.isSeen();
       this.disliked.push(index);
+      console.log(index);
     }
 
     public getDisLikedRestaurants(): number[]{
@@ -3869,6 +3870,7 @@ import { filter_model } from "./filter_model";
       //if statement for liked restaurants
       this.isSeen();
       this.indifferent.push(index);
+      console.log(index);
     }
 
     public getindifferentRestaurant(): number[]{
@@ -3905,7 +3907,8 @@ import { filter_model } from "./filter_model";
     }
 
       console.log(this.filtered_data);
-      if(i >=1 && this.filtered_data.length == 0){
+      if(i >= 1 && this.filtered_data.length == 0){
+        window.alert('There is no ' + this.f.cuisine + ' eatery in ' + this.f.city + '. Please make another selection.');
         console.log('no such filter')
         this.resetFilter();
       }

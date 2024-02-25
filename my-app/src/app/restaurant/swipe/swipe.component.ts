@@ -25,15 +25,24 @@ constructor(
 ) {restaurantService.filterData();
 }
 public hitlike(): void{
-  this.index += 1;
   this.restaurantService.likeRestaurant(this.index);
+  this.index += 1;
+  if(this.index == this.restaurantService.filtered_data.length){
+    window.alert('There are no more ' + this.restaurantService.f.cuisine + ' eateries in ' + this.restaurantService.f.city + '.');
+  }
 }
 public hitdislike(): void{
-  this.index += 1;
   this.restaurantService.dislikeRestaurant(this.index);
+  this.index += 1;
+  if(this.index == this.restaurantService.filtered_data.length){
+    window.alert('There are no more ' + this.restaurantService.f.cuisine + ' eateries in ' + this.restaurantService.f.city + '.');
+  }
 }
 public hitindifferent(): void{
-  this.index += 1;
   this.restaurantService.indifferentRestaurant(this.index);
+  this.index += 1;
+  if(this.index == this.restaurantService.filtered_data.length){
+    window.alert('There are no more ' + this.restaurantService.f.cuisine + ' eateries in ' + this.restaurantService.f.city + '.');
+  }
 }
 }
