@@ -43,7 +43,7 @@
     <div id="bottom-container">
         <div class="grid-container">
             <div class="grid-item">
-                <img src="/assets/img/match-button.png" alt="Match" (click)="restaurantService.menuSelectPage()" class="small-image">
+                <img src="/assets/img/match-button.png" alt="Match" (click)="restaurantService.menuSelectPage(); restaurantService.resetFilter()" class="small-image">
             </div>
             <div class="grid-item">
                 <img src="/assets/img/rank-button.png" alt="Rank" (click)="restaurantService.likedPage()" class="small-image">
@@ -66,7 +66,7 @@
 </p>
 
 <h2>Not in the mood for:</h2>
-<p *ngFor="let index of restaurantService.getDisLikedRestaurants()">
+<p *ngFor="let index of restaurantService.getindifferentRestaurant()">
     Name: {{restaurantService.myData[index].name}}
 </p>
 
