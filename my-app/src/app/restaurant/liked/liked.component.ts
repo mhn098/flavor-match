@@ -5,7 +5,7 @@ import { RestaurantService } from '../restaurant.service';
 @Component({
   selector: 'app-liked',
   standalone: true,
-  // imports: [],
+  imports: [],
   templateUrl: './liked.component.html',
   styleUrl: './liked.component.css'
 })

@@ -9,7 +9,7 @@ import { filter_model } from '../filter_model';
 @Component({
   selector: 'app-menu-select',
   standalone: true,
-  // imports: [],
+  imports: [],
   templateUrl: './menu-select.component.html',
   styleUrl: './menu-select.component.css'
 })
@@ -20,11 +20,6 @@ export class MenuSelectComponent {
     component: MenuSelectComponent,
     canActivate: []
   };
-  public selectForm = this.formBuilder.group({
-    city: '',
-    cuisine: ''
-  });
-  cuisinesSelect: any;
 
   constructor(
   public restaurantService: RestaurantService,
@@ -37,5 +32,4 @@ public filter(i_city: string, i_cuisine: string){
 
   this.restaurantService.filterS(city, cuisine);
 }
-
 }
