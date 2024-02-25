@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RestaurantService } from '../restaurant.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-result',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './result.component.html',
   styleUrl: './result.component.css'
 })

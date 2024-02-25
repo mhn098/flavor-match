@@ -49,25 +49,25 @@
 <div class="grid-container3">
     <div class="grid-item3">
     <p *ngFor="let index of restaurantService.getLikedRestaurants()">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
         {{restaurantService.myData[index].name}}
     </p>
     </div>
     <div class="grid-item3">
     <p *ngFor="let index of restaurantService.getindifferentRestaurant()">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
-        <img *ngIf="restaurantService.myData[index-1].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'American'" src="/assets/img/american.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Asian'" src="/assets/img/asian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Breakfast'" src="/assets/img/breakfast.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Coffee'" src="/assets/img/cafe.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Indian'" src="/assets/img/indian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Italian'" src="/assets/img/italian.png" class="small-image2">
+        <img *ngIf="restaurantService.myData[index].cuisine === 'Mexican'" src="/assets/img/mexican.png" class="small-image2">
         {{restaurantService.myData[index].name}}
     </p>
     </div>

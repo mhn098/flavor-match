@@ -12,7 +12,8 @@ import { RestaurantService } from '../restaurant.service';
 })
 export class MainPageComponent {
   public static Route = {
-    path: 'restaurant/main-page',
+    // path: 'restaurant/main-page',
+    path: '',
     title: 'Main Page',
     component: MainPageComponent,
     canActivate: []

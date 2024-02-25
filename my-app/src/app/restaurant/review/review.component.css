@@ -1,17 +1,107 @@
-/* body {
-	background-size: cover;
-	background-position: center;
-	background-image: url(/assets/img/trial-bg.png);
-	background-color: #ffd6e9;
-	color: #000000;
-    text-align: center;
-	margin-top: 0px;
-} */
+.container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/img/trial-bg.png);
+    width: 1260px;
+    height: 615px;
+}
 
 .topright {
     float: right;
-  }
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    cursor: pointer; 
+    transition: filter 0.3s ease;
+}
 
 .topleft {
     float: left;
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.grid-item {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.topright:hover,
+.topleft:hover,
+.grid-item:hover {
+    filter: brightness(120%);
+}
+
+.center {
+    text-align: center;
+}
+
+form {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.hoverable {
+    background-color: #ec81e5;
+}
+
+button.hoverable:hover {
+    background-color: #e43ec3;
+}
+
+button.non-hoverable {
+    background-color: transparent;
+}
+
+.small-image {
+    height: 50px;
+    width: 150px;
+}
+
+.grid-item {
+    margin: 0 10px;
+    float: left;
+    transition: filter 0.3s ease;
+	margin-bottom: 60px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
