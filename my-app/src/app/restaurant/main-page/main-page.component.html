@@ -9,7 +9,9 @@
     </div>
 
     <div class="bottom-bar">
-        <button (click)="restaurantService.menuSelectPage(); restaurantService.resetFilter()">Start!</button>
+      <button mat-stroked-button class="non-hoverable" (click)="restaurantService.menuSelectPage(); restaurantService.resetFilter()">
+        <img src="/assets/img/start-button.png" alt="Start" class="small-image1">
+      </button>
     </div>
   </div>
 

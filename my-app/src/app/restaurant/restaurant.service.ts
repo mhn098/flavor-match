@@ -3821,7 +3821,7 @@ import { filter_model } from "./filter_model";
     }
 
     public mainPage() {
-      this.router.navigate(['/restaurant/main-page']);
+      this.router.navigate(['']);
   }
 
   public filterS(i_city: string, i_cuisine: string){
@@ -3895,6 +3895,13 @@ import { filter_model } from "./filter_model";
         }
         i++; //looping through myData
       }
+      // console.log(this.filtered_data);
+      
+      if(i >= 1 && this.filtered_data.length == 0){
+        window.alert('There is no ' + this.f.cuisine + ' eatery in ' + this.f.city + '. Please make another selection.');
+        console.log('no such filter')
+        this.resetFilter();
+      }
     }
 
     public result(index: number): void {
@@ -3904,14 +3911,6 @@ import { filter_model } from "./filter_model";
 
     public getResult(): number {
       return this.resultIndex;
-    }
-
-      console.log(this.filtered_data);
-      if(i >= 1 && this.filtered_data.length == 0){
-        window.alert('There is no ' + this.f.cuisine + ' eatery in ' + this.f.city + '. Please make another selection.');
-        console.log('no such filter')
-        this.resetFilter();
-      }
     }
 
       public resetFilter(){

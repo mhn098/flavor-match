@@ -7,6 +7,24 @@
     transition: filter 0.3s ease;
 }
 
+.topright {
+    float: right;
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    cursor: pointer; 
+    transition: filter 0.3s ease;
+}
+
+.topleft {
+    float: left;
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
 .topleft:hover {
     filter: brightness(120%);
 }
@@ -22,17 +40,17 @@
     height: 615px;
 }
 
-/* .content {
+.content {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     max-width: 600px;
     margin: 0 auto;
-} */
+}
 
-/* .restaurant-details {
+.restaurant-details {
     flex-grow: 1;
-} */
+}
 
 .cuisine-images {
     display: flex;
@@ -40,7 +58,7 @@
     margin-top: 75px;
 }
 
-/* .reaction-buttons button {
+.reaction-buttons button {
     margin: 0 24px;
     height: 150px;
     width: 150px;
@@ -54,7 +72,7 @@
 
 .reaction-buttons button:hover {
     filter: brightness(120%);
-} */
+}
 
 .column {
     display: flex;

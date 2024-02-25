@@ -21,3 +21,29 @@
 .glow:hover {
     filter: brightness(120%);
 }
+
+.small-image1 {
+    height: 50px;
+    width: 115px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.hoverable {
+    background-color: #ec81e5;
+}
+
+button.hoverable:hover {
+    background-color: #e43ec3;
+}
+
+button.non-hoverable {
+    background-color: transparent;
+}

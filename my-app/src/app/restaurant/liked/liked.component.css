@@ -16,13 +16,13 @@
     transition: filter 0.3s ease;
 }
 
-/* .grid-item {
+.grid-item {
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
     transition: filter 0.3s ease;
-} */
+}
 
 button {
     width: 100%;
