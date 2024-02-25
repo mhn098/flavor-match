@@ -1,8 +1,20 @@
+<div class="container">
+    <div class="middle">
+        <button mat-stroked-button class="non-hoverable" (click)="restaurantService.mainPage()">
+            <img src="/assets/img/better-fm-logo.png"
+            width="500" 
+            height="135">
+        </button>
+    </div>
+    <div class="center">
+    <form>
+    <h2>Feeling Adventurous?</h2>
+    <img src="assets/img/happy-reaction.png" class="small-image">
+<div class="space">
+    <button type="button" class="hoverable" (click)="restaurantService.result(restaurantService.roulette())"> Generate </button>
+</div>
+    </form>
+    </div>
+</div>
 
-
-
-<button type="button" class="hoverable" (click)="restaurantService.result(restaurantService.roulette())"> Generate </button>
-
-
-<p> Random Restaurant: {{restaurantService.randomGenerator()}} </p>
 
