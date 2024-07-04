@@ -1,5 +1,5 @@
 # Flavor Match
-Flavor Match is a web application designed to help users explore various restaurants and eateries within the North Carolina Triangle area. Whether you're in Raleigh, Durham, Chapel Hill, or the Research Triangle Park (RTP), Flavor Match assists you in finding the perfect dining spot based on your location and preferences.
+Flavor Match is a web application designed to help users explore various restaurants and eateries within the North Carolina Triangle area. Whether you're in Raleigh, Durham, Chapel Hill, or the Research Triangle Park (RTP), Flavor Match assists you in finding the perfect dining spot based on your location and preferences. https://www.youtube.com/watch?v=xHObUNUiDvA&ab_channel=Mischele
 
 # Features
 Location-based Recommendations: Discover nearby restaurants and eateries based on your current location.
